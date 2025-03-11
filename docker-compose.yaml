@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  tei:
+    image: ghcr.io/huggingface/text-embeddings-inference:cpu-1.6
+    # Model can be overridden using the TEI_MODEL environment variable
+    command: --model-id ${TEI_MODEL:-sentence-transformers/all-MiniLM-L6-v2}
+    ports:
+      - "8080:80"
+    volumes:
+      - ./tei_data:/data
+
+  tgi:
+    image: ghcr.io/huggingface/text-generation-inference:3.1.0
+    # Model can be overridden using the TGI_MODEL environment variable
+    command: --model-id ${TGI_MODEL:-Qwen/Qwen2.5-0.5B-Instruct} --num-shard 1 --disable-custom-kernels
+    ports:
+      - "8081:80"
+    volumes:
+      - ./tgi_data:/data
+
+  rag:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - tei
+      - tgi
+    volumes:
+      - ./index_storage:/app/index_storage
+      - ./data:/app/data
