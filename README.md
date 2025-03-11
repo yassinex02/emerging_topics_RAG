@@ -63,47 +63,7 @@ curl -X POST "http://localhost:8000/generate" \
 
 ### Testing the API with Python
 
-Save the following script as `test_rag.py` and run it after starting the containers:
-
-```python
-import requests
-
-def main():
-    base_url = "http://localhost:8000"  # Adjust if needed
-
-    # Upload sample texts
-    texts = [
-        "The capital of France is Paris. France is in Europe.",
-        "Don Quixote was written by Miguel de Cervantes in the early 17th century.",
-        "Python is a popular programming language created by Guido van Rossum."
-    ]
-    upload_payload = {"texts": texts}
-    print("Uploading documents...\n")
-    resp_upload = requests.post(f"{base_url}/upload", json=upload_payload)
-    print("Status code /upload:", resp_upload.status_code)
-    print("Response /upload:", resp_upload.json())
-
-    # Example questions
-    questions = [
-        "What is the capital of France?",
-        "Who created the Python language?",
-        "Who wrote Don Quixote?"
-    ]
-
-    for q in questions:
-        print(f"\nQuestion: {q}")
-        generate_payload = {"new_message": {"role": "user", "content": q}}
-        resp_generate = requests.post(f"{base_url}/generate", json=generate_payload)
-        print("Status code /generate:", resp_generate.status_code)
-        if resp_generate.ok:
-            data = resp_generate.json()
-            print("Generated response:", data.get("generated_text"))
-        else:
-            print("Error:", resp_generate.text)
-
-if __name__ == "__main__":
-    main()
-```
+You can test the "test_rag.py" file to test how this works running on python
 
 ### Summary
 
@@ -111,3 +71,24 @@ if __name__ == "__main__":
 - **Run the containers**: `docker compose up -d`
 - **Stop the containers**: `docker compose down`
 - **Test the API**: Use `curl` commands or `test_rag.py`
+
+
+### HOW TO WORK WITH THIS MOVING FORWARD
+
+1. When you open the repository, run the following in your terminal, to build the docker containers:
+
+```sh
+docker compose build
+```
+
+```sh
+docker compose up -d
+```
+
+2. Work on the project
+
+3. When you want to leave/close the project, run the following in the terminal to close the containers:
+```sh
+docker compose down
+```
+s
