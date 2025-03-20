@@ -3,8 +3,11 @@ import os
 import requests
 
 from dotenv import load_dotenv
-from ragas import evaluate
-from ragas import EvaluationDataset
+from langchain_openai import ChatOpenAI
+from langchain_openai import OpenAIEmbeddings
+from ragas import EvaluationDataset, evaluate
+from ragas.embeddings import LangchainEmbeddingsWrapper
+from ragas.llms import LangchainLLMWrapper
 from ragas.metrics import (
     faithfulness,
     answer_relevancy,
@@ -96,8 +99,11 @@ def evaluate_rag_app(evaluation_dataset):
     Args:
         evaluation_dataset (ragas.EvaluationDataset): The dataset containing user queries, retrieved contexts, generated responses, and reference answers.
     """
+    evaluator_llm = LangchainLLMWrapper(ChatOpenAI(model="gpt-4o-mini"))
+    evaluator_embeddings = LangchainEmbeddingsWrapper(OpenAIEmbeddings(model="text-embedding-3-small"))
+
     result = evaluate(
-        dataset = evaluation_dataset, 
+        dataset=evaluation_dataset, 
         metrics=[
             faithfulness,
             answer_relevancy,
@@ -107,6 +113,8 @@ def evaluate_rag_app(evaluation_dataset):
             context_recall,    
             answer_similarity,
         ],
+        llm=evaluator_llm,
+        embeddings=evaluator_embeddings
     )
 
     df = result.to_pandas()
