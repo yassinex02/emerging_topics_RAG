@@ -2,15 +2,17 @@ import json
 import os
 import requests
 
-
 from dotenv import load_dotenv
 from ragas import evaluate
 from ragas import EvaluationDataset
 from ragas.metrics import (
     faithfulness,
     answer_relevancy,
-    context_recall,
+    answer_correctness,
     context_precision,
+    context_utilization,
+    context_recall,    
+    answer_similarity,
 )
 
 
@@ -97,10 +99,13 @@ def evaluate_rag_app(evaluation_dataset):
     result = evaluate(
         dataset = evaluation_dataset, 
         metrics=[
-            context_precision,
-            context_recall,
             faithfulness,
             answer_relevancy,
+            answer_correctness,
+            context_precision,
+            context_utilization,
+            context_recall,    
+            answer_similarity,
         ],
     )
 
