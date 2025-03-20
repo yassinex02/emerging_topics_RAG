@@ -2,8 +2,17 @@ import json
 import os
 import requests
 
-from datasets import Dataset
+
 from dotenv import load_dotenv
+from ragas import evaluate
+from ragas import EvaluationDataset
+from ragas.metrics import (
+    faithfulness,
+    answer_relevancy,
+    context_recall,
+    context_precision,
+)
+
 
 load_dotenv()
 BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
@@ -18,6 +27,8 @@ def index_documents(path):
     """
     Load documents from the evaluation dataset then send a request to the /upload endpoint to index and persist the evaluation documents.
 
+    Args:
+        path (str): Path to the SQAC corpus test.json file.
     """
     data = read_json(path)["data"]
 
@@ -33,53 +44,85 @@ def index_documents(path):
     print("Response /upload:", resp_upload.json())
 
 
-def get_rag_answer():
-    return "Pretend I answered"
-
-
-def get_eval_dataset(path):
+def generate_response():
     """
-    Load and prepare the evaluation dataset.
+    Send a request to the /generate endpoint of the RAG app.
 
+    Returns:
+        dict: A dictionary containing generated text and retrieved contexts.
+    """
+    return {
+        "generated_text": "Pretend I generated something",
+        "contexts": ["Fake context 1", "Fake context 2"]
+    }
+
+
+def generate_ragas_dataset(path):
+    """
+    Load and prepare the evaluation dataset by generating responses and structuring data for evaluation.
+
+    Args:
+        path (str): Path to the SQAC corpus test.json file.
+
+    Returns:
+        ragas.EvaluationDataset: Prepared dataset for RAG evaluation.
     """
     data = read_json(path)["data"]
-    
-    questions_list = []
-    ground_truths_list = []
-    contexts_list = []
-    answers_list = []
 
+    dataset = []
+    
     for text in data:
         for paragraph in text["paragraphs"]:
             for qa in paragraph["qas"]:
-                question = qa["question"]
-                ground_truth = qa["answers"][0]["text"]
-                context = paragraph["context"]
-                answer = get_rag_answer()
+                rag_answer = generate_response()
+                dataset.append({
+                    "user_input": qa["question"],
+                    "retrieved_contexts": rag_answer["contexts"],
+                    "response": rag_answer["generated_text"],
+                    "reference": qa["answers"][0]["text"]
+                })
+                    
+    evaluation_dataset = EvaluationDataset.from_list(dataset)
 
-                questions_list.append(question)
-                ground_truths_list.append(ground_truth)
-                contexts_list.append(context)
-                answers_list.append(answer)
+    return evaluation_dataset
 
-    data_dict = {
-        "question": questions_list,
-        "answer": answers_list,
-        "contexts": contexts_list,
-        "ground_truths": ground_truths_list,
-    }
-    
-    dataset = Dataset.from_dict(data_dict)
 
-    return dataset
+def evaluate_rag_app(evaluation_dataset):
+    """
+    Compute evaluation metrics for the provided evaluation dataset using OpenAI's GPT-4o-mini as the evaluator.
+
+    Args:
+        evaluation_dataset (ragas.EvaluationDataset): The dataset containing user queries, retrieved contexts, generated responses, and reference answers.
+    """
+    result = evaluate(
+        dataset = evaluation_dataset, 
+        metrics=[
+            context_precision,
+            context_recall,
+            faithfulness,
+            answer_relevancy,
+        ],
+    )
+
+    df = result.to_pandas()
+
+    save_path = os.path.join("evaluation", "metrics.csv")
+    df.to_csv(save_path, index=False)
 
 
 def main():
-    """"""
+    """
+    Perform an end-to-end evaluation of the RAG application using the SQAC corpus test set.
+    
+    Steps:
+        1. Index the documents from the evaluation dataset.
+        2. Generate the evaluation dataset by obtaining responses from the RAG system.
+        3. Compute RAGAS evaluation metrics and save them as a CSV file.
+    """
     data_path = os.path.join("evaluation", "data", "test.json")
     index_documents(data_path)
-    dataset = get_eval_dataset(data_path)
-    # print(dataset)
+    evaluation_dataset = generate_ragas_dataset(data_path)
+    evaluate_rag_app(evaluation_dataset)
 
 
 if __name__ == "__main__":
