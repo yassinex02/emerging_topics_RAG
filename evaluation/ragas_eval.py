@@ -1,5 +1,6 @@
 import argparse
 import json
+import logging
 import os
 import requests
 from datetime import datetime
@@ -31,6 +32,12 @@ EVAL_DIR = "evaluation"
 JSON_LOG_FILE = os.path.join(EVAL_DIR, "experiment_log.json")
 CSV_LOG_FILE = os.path.join(EVAL_DIR, "experiment_history.csv")
 
+# --- Logging Setup ---
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
 
 # --- IO Utils ---
 def read_json(path: str):
@@ -61,10 +68,10 @@ def index_documents(data: list, max_texts: int=None):
         texts = texts[:max_texts]
 
     upload_payload = {"texts": texts}
-    print("Uploading documents...\n")
+    logging.info("Uploading documents...")
     resp = requests.post(f"{BASE_URL}/upload", json=upload_payload)
-    print("Status code /upload:", resp.status_code)
-    print("Response /upload:", resp.json())
+    logging.info(f"Status code /upload: {resp.status_code}")
+    logging.info(f"Response /upload: {resp.json()}")
 
 
 # --- RAG App Response ---
@@ -78,7 +85,7 @@ def generate_response(question: str):
     Returns:
         dict: A dictionary containing the generated response and retrieved contexts.
     """
-    print(f"\nQuestion: {question}")
+    logging.info(f"Question: {question}")
     payload = {"new_message": {"role": "user", "content": question}}
 
     try:
@@ -87,7 +94,7 @@ def generate_response(question: str):
         return response.json()
     
     except requests.exceptions.RequestException as e:
-        print(f"❌ Error calling /generate: {e}")
+        logging.error(f"Error calling /generate: {e}")
         return {"generated_text": "Error: Unable to generate response.", "contexts": []}
 
 
@@ -187,7 +194,7 @@ def prepare_experiment_log(result: EvaluationResult, experiment_notes: str):
 def save_experiment_log_to_json(log_data: dict):
     os.makedirs(EVAL_DIR, exist_ok=True)
     save_json(log_data, JSON_LOG_FILE)
-    print(f"Experiment logged in {JSON_LOG_FILE}")
+    logging.info(f"Experiment logged in {JSON_LOG_FILE}")
 
 
 def append_experiment_summary_to_csv(log_data: dict):
@@ -226,7 +233,7 @@ def append_experiment_summary_to_csv(log_data: dict):
     else:
         df.to_csv(CSV_LOG_FILE, mode="w", index=True)
 
-    print("Experiment appended to", CSV_LOG_FILE)
+    logging.info(f"Experiment appended to {CSV_LOG_FILE}")
 
 
 # --- Main Evaluation Entry Point ---
