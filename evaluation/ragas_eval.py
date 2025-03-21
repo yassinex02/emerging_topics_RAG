@@ -169,11 +169,16 @@ def prepare_experiment_log(result: EvaluationResult, experiment_notes: str):
     """
     df = result.to_pandas()
     avg_scores = df.select_dtypes(include="number").mean().to_dict()
+
+    numeric_scores = [v for v in avg_scores.values() if isinstance(v, (int, float))]
+    overall_score = sum(numeric_scores) / len(numeric_scores) if numeric_scores else None
+
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     return {
         "experiment_notes": experiment_notes,
         "timestamp": timestamp,
+        "overall_score": overall_score,
         "average_scores": avg_scores,
         "scores": df.to_dict(orient="records")
     }
@@ -199,7 +204,7 @@ def append_experiment_summary_to_csv(log_data: dict):
     summary_row = {
         "timestamp": log_data["timestamp"],
         "experiment_notes": log_data["experiment_notes"],
-        "average_score": round(overall_average_score, 4),
+        "overall_score": round(overall_average_score, 4),
         **{k: round(v, 4) for k, v in average_metrics.items()}
     }
 
