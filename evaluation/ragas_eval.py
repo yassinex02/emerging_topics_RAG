@@ -10,6 +10,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from ragas import EvaluationDataset, evaluate
+from ragas.dataset_schema import EvaluationResult
 from ragas.embeddings import LangchainEmbeddingsWrapper
 from ragas.llms import LangchainLLMWrapper
 from ragas.metrics import (
@@ -20,13 +21,13 @@ from ragas.metrics import (
     context_recall,
     answer_similarity,
 )
-from ragas.dataset_schema import EvaluationResult
+from ragas.run_config import RunConfig
 
 
 # --- Config ---
 load_dotenv()
 BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
-MAX_TEXTS = 1
+MAX_TEXTS = 20
 LLM_EVALUATOR = "gpt-4o-mini"
 EMBEDDINGS_EVALUATOR = "text-embedding-3-small"
 EVAL_DIR = "evaluation"
@@ -169,6 +170,13 @@ def get_evaluation_result(evaluation_dataset: EvaluationDataset):
 
     return evaluate(
         dataset=evaluation_dataset,
+        raise_exceptions=True,
+        run_config=RunConfig(
+            timeout=60,
+            max_retries=10,
+            max_wait = 180,
+            max_workers= 1,
+        ),
         metrics=[
             faithfulness,
             answer_relevancy,
@@ -178,7 +186,7 @@ def get_evaluation_result(evaluation_dataset: EvaluationDataset):
             answer_similarity,
         ],
         llm=evaluator_llm,
-        embeddings=evaluator_embeddings
+        embeddings=evaluator_embeddings,
     )
 
 
