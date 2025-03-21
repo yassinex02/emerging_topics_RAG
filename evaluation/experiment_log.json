@@ -1,15 +1,15 @@
 {
     "experiment_notes": "Baseline score without changing the rag app",
-    "timestamp": "2025-03-21 14:06:08",
-    "overall_score": 0.3502935676437376,
-    "responses_per_second": 0.1488,
+    "timestamp": "2025-03-21 14:25:36",
+    "overall_score": 0.3408853638731326,
+    "responses_per_second": 0.1524,
     "average_scores": {
-        "faithfulness": 0.11694444444444443,
-        "answer_relevancy": 0.5456975473840935,
-        "answer_correctness": 0.14774089004521393,
-        "context_precision": 0.4144113756248448,
-        "context_recall": 0.6,
-        "semantic_similarity": 0.2769671483638291
+        "faithfulness": 0.1126388888888889,
+        "answer_relevancy": 0.5257669710127265,
+        "answer_correctness": 0.10525698409512728,
+        "context_precision": 0.4130224867365485,
+        "context_recall": 0.6166666666666667,
+        "semantic_similarity": 0.27196018583883774
     },
     "scores": [
         {
@@ -33,7 +33,7 @@
             "answer_correctness": 0.08878315488991709,
             "context_precision": 0.3333333333,
             "context_recall": 1.0,
-            "semantic_similarity": 0.35511008855674975
+            "semantic_similarity": 0.35513261955966835
         },
         {
             "user_input": "\u00bfDe d\u00f3nde proviene el t\u00e9rmino \"c\u00e9lula\")",
@@ -49,14 +49,14 @@
                 "Por otro lado, la estructura de la c\u00e9lula var\u00eda dependiendo de la situaci\u00f3n taxon\u00f3mica del ser vivo: de este modo, las c\u00e9lulas vegetales difieren de las animales, as\u00ed como de las de los hongos. ",
                 "Por ejemplo, las c\u00e9lulas animales carecen de pared celular, son muy variables, no tiene plastos, puede tener vacuolas pero no son muy grandes y presentan centr\u00edolos (que son agregados de microt\u00fabulos cil\u00edndricos que contribuyen a la formaci\u00f3n de los cilios y los flagelos y facilitan la divisi\u00f3n celular). "
             ],
-            "response": "El t\u00e9rmino \"c\u00e9lula\" proviene del lat\u00edn \"c\u00e9lula\" y se refiere a la unidad b\u00e1sica de vida que constituye una c\u00e9lula. Es una unidad biol\u00f3gica que contiene la mayor\u00eda de los componentes biol\u00f3gicos necesarios para la vida de una c\u00e9lula, incluyendo:\n\n1. Prote\u00ednas\n2. Carbohidratos\n3. F\u00f3sforo\n4. Vitamina B12\n5. Vitamina B6\n6. Vitamina B12\n7. Vitamina B12\n8. Vitamina B12\n9. Vitamina",
+            "response": "El t\u00e9rmino \"c\u00e9lula\" proviene de la palabra griega \"k\u00e9leusis\", que significa \"c\u00e9lula\" en lat\u00edn. En espa\u00f1ol, se traduce como \"c\u00e9lula\" o \"c\u00e9lula\".",
             "reference": "del lat\u00edn cellula, diminutivo de cella, \u2018celda\u2019",
             "faithfulness": 0.3333333333333333,
-            "answer_relevancy": 0.5696031348168261,
-            "answer_correctness": 0.2550537310031547,
+            "answer_relevancy": 0.7060734599988785,
+            "answer_correctness": 0.16469916005041874,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.5202149240126188
+            "semantic_similarity": 0.658719447902727
         },
         {
             "user_input": "\u00bfC\u00f3mo se denominan a los seres vivos con una \u00fanica c\u00e9lula?",
@@ -76,7 +76,7 @@
             "reference": "unicelulares",
             "faithfulness": 1.0,
             "answer_relevancy": 0.975051093922432,
-            "answer_correctness": 0.62345707051389,
+            "answer_correctness": 0.6234560183518463,
             "context_precision": 0.7499999999625,
             "context_recall": 1.0,
             "semantic_similarity": 0.4938240734073849
@@ -95,14 +95,14 @@
                 "Las c\u00e9lulas de los vegetales, por su lado, presentan una pared celular compuesta principalmente de celulosa, disponen de plastos como cloroplastos (org\u00e1nulo capaz de realizar la fotos\u00edntesis), cromoplastos (org\u00e1nulos que acumulan pigmentos) o leucoplastos (org\u00e1nulos que acumulan el almid\u00f3n fabricado en la fotos\u00edntesis), poseen vacuolas de gran tama\u00f1o que acumulan sustancias de reserva o de desecho producidas por la c\u00e9lula y finalmente cuentan tambi\u00e9n con plasmodesmos, que son conexiones citoplasm\u00e1ticas que permiten la circulaci\u00f3n directa de las sustancias del citoplasma de una c\u00e9lula a otra, con continuidad de sus membranas plasm\u00e1ticas.",
                 "Pero en el momento que las poblaciones de los cet\u00e1ceos m\u00e1s grandes disminuy\u00f3, se convirti\u00f3 en blanco de los balleneros de principios del siglo XX. "
             ],
-            "response": "El material gen\u00e9tico en las c\u00e9lulas eucariotas se encuentra en la membrana celular. Es importante notar que la membrana celular es una parte muy importante de la estructura celular, y su funci\u00f3n es proteger y transportar el material gen\u00e9tico.",
+            "response": "El material gen\u00e9tico en las c\u00e9lulas eucariotas se encuentra principalmente en las c\u00e9lulas sangu\u00edneas. Aqu\u00ed hay algunos puntos clave:\n\n1. C\u00e9lulas sangu\u00edneas: Las c\u00e9lulas sangu\u00edneas son las principales c\u00e9lulas gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente gen\u00e9ticamente",
             "reference": "el n\u00facleo",
-            "faithfulness": 0.25,
-            "answer_relevancy": 0.9999993013255756,
-            "answer_correctness": 0.09579242404040707,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.9530811433641336,
+            "answer_correctness": 0.083869133676026,
             "context_precision": 0.14285714284285714,
             "context_recall": 1.0,
-            "semantic_similarity": 0.38319313012522926
+            "semantic_similarity": 0.335466703581363
         },
         {
             "user_input": "\u00bfC\u00f3mo se llaman las c\u00e9lulas que necesitan las neuronas para sobrevivir?",
@@ -118,14 +118,14 @@
                 "Por otro lado, la estructura de la c\u00e9lula var\u00eda dependiendo de la situaci\u00f3n taxon\u00f3mica del ser vivo: de este modo, las c\u00e9lulas vegetales difieren de las animales, as\u00ed como de las de los hongos. ",
                 "Los isle\u00f1os se niegan de forma tajante a un cambio en su situaci\u00f3n y prefieren mantenerse como s\u00fabditos de la corona brit\u00e1nica."
             ],
-            "response": "Las c\u00e9lulas que necesitan las neuronas para sobrevivir se llaman c\u00e9lulas de transmisi\u00f3n de se\u00f1ales (neuronas de transmisi\u00f3n).",
+            "response": "Las c\u00e9lulas que necesitan las neuronas para sobrevivir se llaman c\u00e9lulas nerviosas.",
             "reference": "gliales",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9999995240315028,
-            "answer_correctness": 0.08138549131495404,
+            "answer_relevancy": 0.9999999999999994,
+            "answer_correctness": 0.08950063647144871,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.32554196525981616
+            "semantic_similarity": 0.35792647001967326
         },
         {
             "user_input": "\u00bfCu\u00e1l es el componente primordial de la pared celular de las c\u00e9lulas vegetales?",
@@ -144,11 +144,11 @@
             "response": "El componente primordial de la pared celular de las c\u00e9lulas vegetales es la prote\u00edna cellulose.",
             "reference": "celulosa",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9999999999999992,
-            "answer_correctness": 0.6334529410220431,
+            "answer_relevancy": 0.9999992977542616,
+            "answer_correctness": 0.6330052444896633,
             "context_precision": 0.11111111109999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.5319972732120429
+            "semantic_similarity": 0.5338117640881721
         },
         {
             "user_input": "\u00bfQu\u00e9 instrumento permiti\u00f3 el estudio de las c\u00e9lulas en el siglo XVII?",
@@ -164,14 +164,14 @@
                 "Dos prop\u00f3sitos igualmente dif\u00edciles pero indispensables para sentarse en el trono soleado de julio. ",
                 "En Jap\u00f3n, el aceite obtenido de la orca tiene una apreciaci\u00f3n similar al del cachalote. "
             ],
-            "response": "El estudio de las c\u00e9lulas en el siglo XVII se bas\u00f3 en la t\u00e9cnica de la microscop\u00eda. Esta t\u00e9cnica permiti\u00f3 observar y estudiar las c\u00e9lulas y otros componentes microsc\u00f3picos de manera m\u00e1s detallada y precisa que no era posible con los m\u00e9todos tradicionales de la \u00e9poca. La microscop\u00eda permiti\u00f3 la observaci\u00f3n de las c\u00e9lulas en profundidad, permitiendo la descripci\u00f3n de su estructura y funcionalidad.",
+            "response": "El estudio de las c\u00e9lulas en el siglo XVII se bas\u00f3 en la observaci\u00f3n de las c\u00e9lulas de las plantas y animales. Este m\u00e9todo permiti\u00f3 a los cient\u00edficos entender mejor la estructura y funcionamiento de las c\u00e9lulas, lo que fue crucial para el desarrollo de la biolog\u00eda molecular y la biolog\u00eda celular.",
             "reference": "microscopio rudimentario de lentes compuestas",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.8355103137102838,
-            "answer_correctness": 0.6925412351224669,
+            "answer_relevancy": 0.8303127768608105,
+            "answer_correctness": 0.08295627462837954,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.46240845481468773
+            "semantic_similarity": 0.33182509851351816
         },
         {
             "user_input": "\u00bfC\u00f3mo se logran resultados m\u00e1s decisivos respecto a la biolog\u00eda celular en el siglo XX?",
@@ -187,14 +187,14 @@
                 "En estos \u00faltimos el n\u00famero de c\u00e9lulas es variable: de unos pocos cientos, como en algunos nematodos, a cientos de billones (1014), como en el caso del ser humano. ",
                 "Las elecciones han sido vistas como un llamado a que Meles reforme su r\u00e9gimen semi-autoritario, dicen analistas. "
             ],
-            "response": "En el siglo XX, se lograron resultados m\u00e1s decisivos en la biolog\u00eda celular a trav\u00e9s de varias t\u00e9cnicas innovadoras y cient\u00edficos:\n\n1. Investigaci\u00f3n de la funci\u00f3n de las prote\u00ednas:\n- Se desarrollaron t\u00e9cnicas para identificar y estudiar las prote\u00ednas espec\u00edficas en c\u00e9lulas.\n- Se utiliz\u00f3 la t\u00e9cnica de \"m\u00e9todo de la prote\u00edna\" para determinar la funci\u00f3n de las prote\u00ednas en c\u00e9lulas.\n\n2. Investigaci\u00f3n de la funci\u00f3n de las genes:\n- Se desarrollaron t\u00e9cnicas para identificar y estudiar las genes espec\u00edficas en c\u00e9lulas.\n",
+            "response": "En el siglo XX, se lograron resultados m\u00e1s decisivos en la biolog\u00eda celular a trav\u00e9s de varias t\u00e9cnicas y investigaciones:\n\n1. Investigaci\u00f3n de la funci\u00f3n de las prote\u00ednas:\n- Se desarrollaron t\u00e9cnicas para identificar y estudiar las prote\u00ednas espec\u00edficas en c\u00e9lulas.\n- Se utiliz\u00f3 la t\u00e9cnica de \"m\u00e9todo de la prote\u00edna\" para determinar la funci\u00f3n de las prote\u00ednas en c\u00e9lulas.\n\n2. Investigaci\u00f3n de la funci\u00f3n de las enzimas:\n- Se desarrollaron t\u00e9cnicas para estudiar la funci\u00f3n de las enzimas en c\u00e9lulas.\n",
             "reference": "mediante los estudios de microscop\u00eda electr\u00f3nica, de fluorescencia y confocal",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.7204805637924742,
-            "answer_correctness": 0.27577736427330657,
+            "answer_relevancy": 0.6536366233283443,
+            "answer_correctness": 0.2487216847273963,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.4364419867335171
+            "semantic_similarity": 0.44924659641000664
         },
         {
             "user_input": "\u00bfCu\u00e1ndo se han popularizado las herramientas moleculares?",
@@ -210,14 +210,14 @@
                 "Dos prop\u00f3sitos igualmente dif\u00edciles pero indispensables para sentarse en el trono soleado de julio. ",
                 "Las elecciones han sido vistas como un llamado a que Meles reforme su r\u00e9gimen semi-autoritario, dicen analistas. "
             ],
-            "response": "Las herramientas moleculares se han popularizado en el siglo XXI, espec\u00edficamente en el siglo XXI. Aqu\u00ed hay algunos puntos clave sobre su popularizaci\u00f3n:\n\n1. Enfoque molecular: Las herramientas moleculares se centran en la observaci\u00f3n y an\u00e1lisis de la estructura y funci\u00f3n de los mol\u00e9culas, utilizando t\u00e9cnicas como el espectroscopismo, la spectroscopia, la microscop\u00eda y la microscop\u00eda.\n\n2. Avances en la comprensi\u00f3n molecular: Las herramientas moleculares han permitido un mejor comprensi\u00f3n de la natur",
+            "response": "Las herramientas moleculares se han popularizado en la d\u00e9cada de 1990. Esta era de la informaci\u00f3n inform\u00e1tica y la computaci\u00f3n se caracteriza por la creaci\u00f3n de software y la implementaci\u00f3n de nuevas tecnolog\u00edas para mejorar la eficiencia y la eficacia de la informaci\u00f3n. Las herramientas moleculares se utilizan para la procesamiento de datos y la an\u00e1lisis de datos, que son fundamentales en la investigaci\u00f3n y la medicina.",
             "reference": "a lo largo del siglo XX",
-            "faithfulness": 0.25,
-            "answer_relevancy": 0.8409986528469134,
-            "answer_correctness": 0.6500800299060137,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.9302484622551207,
+            "answer_correctness": 0.18862594727450932,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.3503201196240548
+            "semantic_similarity": 0.2545037890980373
         },
         {
             "user_input": "\u00bfCu\u00e1l es el formato del lector de DVD de la PS3?",
@@ -236,11 +236,11 @@
             "response": "El formato del lector de DVD de la PS3 es DVD-RW.",
             "reference": "Blu-Ray",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9224248352652271,
-            "answer_correctness": 0.0882476719794308,
+            "answer_relevancy": 0.9611995409903757,
+            "answer_correctness": 0.08826630111793973,
             "context_precision": 0.8095238094968253,
             "context_recall": 1.0,
-            "semantic_similarity": 0.35306520447175893
+            "semantic_similarity": 0.35293960272646957
         },
         {
             "user_input": "\u00bfQui\u00e9n promueve el formato HDVD?",
@@ -256,14 +256,14 @@
                 "Cabe destacar que el lanzamiento de PS3 ser\u00e1 simult\u00e1neo en todo el mundo.",
                 "Un sinf\u00edn de situaciones vividas, pena, cansancio, decepciones, y alegr\u00edas."
             ],
-            "response": "El formato de discograf\u00eda m\u00e1s popular y conocido como HDVD (High Definition DVD) se promueve por Sony.",
+            "response": "El formato de disc\u00f3metro de discos de disco duro m\u00e1s popular y conocido como DVD est\u00e1 promovido por varias organizaciones y empresas. Sin embargo, no hay una sola persona o grupo que promueve espec\u00edficamente el formato de disc\u00f3metro de discos de disco duro. \n\nLos disc\u00f3metros de discos de disco duro m\u00e1s conocidos incluyen:\n\n1. Blu-ray Disc\u00f3metro de Discos de Disco Duro\n2. Blu-ray Disc\u00f3metro de Discos de Disco Duro de Blu-ray\n3. Blu-ray Disc\u00f3metro de Discos de Disco Duro de Blu-ray de Blu",
             "reference": "Toshiba",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9254403300271304,
-            "answer_correctness": 0.06476848880987535,
+            "answer_relevancy": 0.0,
+            "answer_correctness": 0.05187545350233726,
             "context_precision": 0.49999999995,
-            "context_recall": 0.0,
-            "semantic_similarity": 0.2590739552395014
+            "context_recall": 1.0,
+            "semantic_similarity": 0.2075410494526171
         },
         {
             "user_input": "\u00bfCu\u00e1ndo llegar\u00e1 al mercado la PS3?",
@@ -282,11 +282,11 @@
             "response": "La PlayStation 3 (PS3) llegar\u00e1 al mercado en 2009.",
             "reference": "noviembre de 2006",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.7376926825061075,
-            "answer_correctness": 0.07273316002661095,
+            "answer_relevancy": 0.7376274646538898,
+            "answer_correctness": 0.07274346279798569,
             "context_precision": 0.3333333333,
             "context_recall": 1.0,
-            "semantic_similarity": 0.29097385119194275
+            "semantic_similarity": 0.2909982673530803
         },
         {
             "user_input": "\u00bfCu\u00e1ndo tuvo lugar el incidente?",
@@ -302,14 +302,14 @@
                 "Un sinf\u00edn de situaciones vividas, pena, cansancio, decepciones, y alegr\u00edas.",
                 "Unas veces por circunstancias del azar has sido compa\u00f1ero y cuando m\u00e1s a gusto te sientes con ellos, una mala racha quita a alguno de tu entorno ciclista; otras veces son motivos profesionales los que te llevan a un cambio de equipo, pero al final creas un grupo de amigos que s\u00f3lo tiene una publicidad: la amistad. "
             ],
-            "response": "Lo siento, pero no tengo informaci\u00f3n espec\u00edfica sobre el incidente que mencionas. Para poder ayudarte, necesitar\u00eda que me proporcionaras m\u00e1s detalles sobre el evento espec\u00edfico.",
+            "response": "Lo siento, pero no tengo informaci\u00f3n espec\u00edfica sobre el incidente que mencionas. Para proporcionarte una respuesta precisa, necesitar\u00eda que me proporcionaras m\u00e1s detalles sobre el evento espec\u00edfico.",
             "reference": "el 12 de julio",
             "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.0517083643167949,
+            "answer_correctness": 0.054219562018755635,
             "context_precision": 0.249999999975,
             "context_recall": 1.0,
-            "semantic_similarity": 0.20931535678577096
+            "semantic_similarity": 0.21687824807502254
         },
         {
             "user_input": "\u00bfQui\u00e9n controla las Islas Malvinas?",
@@ -328,11 +328,11 @@
             "response": "Las Islas Malvinas son territorios de la Argentina. La control de estas islas est\u00e1 bajo la gesti\u00f3n del gobierno nacional de la Argentina.",
             "reference": "el Gobierno brit\u00e1nico",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.7513432014905973,
+            "answer_relevancy": 0.7513362386246075,
             "answer_correctness": 0.0717365026962125,
-            "context_precision": 0.8666666666377778,
+            "context_precision": 0.699999999965,
             "context_recall": 1.0,
-            "semantic_similarity": 0.2869309864431083
+            "semantic_similarity": 0.28694601078485
         },
         {
             "user_input": "\u00bfCu\u00e1nto dur\u00f3 el enfrentamiento entre Argentina y el Reino Unido?",
@@ -348,14 +348,14 @@
                 "El martes pasado, al hablar ante el Comit\u00e9 de Descolonizaci\u00f3n de las Naciones Unidas, el canciller argentino, Adalberto Rodr\u00edguez Giavarini, reclam\u00f3 al Reino Unido que \"no desoiga\" el llamamiento de los organismos internacionales para que se abra una negociaci\u00f3n formal sobre soberan\u00eda. ",
                 "\"Esta Canciller\u00eda est\u00e1 formulando la correspondiente protesta al Gobierno brit\u00e1nico por esa violaci\u00f3n del espacio a\u00e9reo argentino\", agrega la declaraci\u00f3n. "
             ],
-            "response": "El enfrentamiento entre Argentina y el Reino Unido tuvo lugar el 15 de octubre de 1973, en la ciudad de Cardiff, en el Reino Unido. Este conflicto fue un enfrentamiento militar entre los dos pa\u00edses, con la finalizaci\u00f3n del conflicto el 16 de octubre de 1973.",
+            "response": "El enfrentamiento entre Argentina y el Reino Unido tuvo lugar el 11 de octubre de 1973, en la ciudad de Cardiff, en el Reino Unido. Este conflicto fue un enfrentamiento militar entre los dos pa\u00edses, con la finalizaci\u00f3n del conflicto el 12 de octubre de 1973.",
             "reference": "74 d\u00edas",
             "faithfulness": 0.25,
-            "answer_relevancy": 0.9281355280073931,
-            "answer_correctness": 0.05157968446259399,
+            "answer_relevancy": 0.9194719465910239,
+            "answer_correctness": 0.051427409387169325,
             "context_precision": 0.3333333333,
             "context_recall": 1.0,
-            "semantic_similarity": 0.20631873785037597
+            "semantic_similarity": 0.2057096375486773
         },
         {
             "user_input": "\u00bfPor qu\u00e9 protest\u00f3 Argentina?",
@@ -371,14 +371,14 @@
                 "El incidente se produjo el 12 de julio cerca de las islas Malvinas, que est\u00e1n bajo dominio brit\u00e1nico y por cuya soberan\u00eda Argentina y el Reino Unido se enfrentaron en una guerra de 74 d\u00edas en 1982, que dej\u00f3 un millar de muertos entre ambos bandos beligerantes. ",
                 "Las protestas estallaron el lunes, a pesar de la prohibici\u00f3n del Primer Ministro Meles Zenawi de realizar protestas de este calibre tras las elecciones legislativas del pasado 15 de mayo. "
             ],
-            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre protestas en Argentina ya que no tengo acceso a informaci\u00f3n actualizada sobre eventos espec\u00edficos. La informaci\u00f3n sobre protestas en Argentina es generalmente limitada a eventos hist\u00f3ricos o de inter\u00e9s nacional, como la Revoluci\u00f3n de 1868 o la Guerra de Independencia. Sin embargo, si tienes alguna otra pregunta o necesitas informaci\u00f3n espec\u00edfica sobre un evento espec\u00edfico, estar\u00e9 encantado de ayudarte.",
+            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre protestas o eventos espec\u00edficos. Soy un asistente de texto que no tiene acceso a informaci\u00f3n sobre eventos o protestas en Argentina. Si tienes alguna otra pregunta o necesitas ayuda con algo m\u00e1s, estar\u00e9 encantado de ayudarte.",
             "reference": "por la \"violaci\u00f3n del espacio a\u00e9reo",
             "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.041533052290003925,
+            "answer_correctness": 0.04729217970174994,
             "context_precision": 0.6805555555328703,
             "context_recall": 1.0,
-            "semantic_similarity": 0.1661061218775916
+            "semantic_similarity": 0.18916871880699976
         },
         {
             "user_input": "\u00bfD\u00f3nde faenaban los barcos de pesca?",
@@ -397,11 +397,11 @@
             "response": "Los barcos de pesca eran fabricados en la ciudad de N\u00e1poles, Italia.",
             "reference": "aguas del Atl\u00e1ntico Sur",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.7993130357569732,
-            "answer_correctness": 0.034320002710845565,
-            "context_precision": 0.249999999975,
+            "answer_relevancy": 0.7992977369571886,
+            "answer_correctness": 0.03431819719537733,
+            "context_precision": 0.7499999999625,
             "context_recall": 0.0,
-            "semantic_similarity": 0.1373321578051297
+            "semantic_similarity": 0.1372727887815093
         },
         {
             "user_input": "\u00bfContra qu\u00e9 protestaban los buques argentinos?",
@@ -417,14 +417,14 @@
                 "Se han organizado protestas en Totonto, Montreal y Otawa. ",
                 "La de Miguel, en recobrarla. "
             ],
-            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre protestas o conflicto militar que ocurrieron en Argentina. Soy un asistente de inteligencia basado en datos y no tengo la capacidad de proporcionar informaci\u00f3n sobre eventos hist\u00f3ricos o conflictos militares. Si necesitas informaci\u00f3n sobre un conflicto militar espec\u00edfico, te recomendar\u00eda buscar informaci\u00f3n en un sitio web de noticias o un sitio web de informaci\u00f3n sobre conflictos militares.",
+            "response": "Los buques argentinos protestaron contra la intervenci\u00f3n militar de la Fuerza A\u00e9rea Argentina (FAR) en el Mar del Sur, principalmente en el marco de la Guerra de las Am\u00e9ricas. Aqu\u00ed hay algunos puntos clave:\n\n1. La intervenci\u00f3n militar: La FAR, fundada en 1976, fue creada para proteger el territorio argentino contra la invasi\u00f3n de la Rep\u00fablica de Chile.\n\n2. La intervenci\u00f3n militar en el Mar del Sur: En 1978, la FAR invadi\u00f3 el marco mar\u00edtimo argentino, lo",
             "reference": "las limitaciones impuestas a la captura de merluza",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.0,
-            "answer_correctness": 0.03410235321174427,
+            "answer_relevancy": 0.7724964402967757,
+            "answer_correctness": 0.06922991562115735,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.13638800257220302
+            "semantic_similarity": 0.2769196624846294
         },
         {
             "user_input": "\u00bfQu\u00e9 quieren los habitantes de las Islas Malvinas?",
@@ -440,14 +440,14 @@
                 "La mayor\u00eda fueron heridos de bala en el pecho, pies, brazos y espaldas, y eran en su mayor\u00eda hombres j\u00f3venes. ",
                 "Los barcos argentinos operaban en esa zona como forma de protesta ante la decisi\u00f3n del Gobierno argentino por las limitaciones impuestas a la captura de merluza. "
             ],
-            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre la situaci\u00f3n actual de los habitantes de las Islas Malvinas, ya que eso podr\u00eda ser ilegal y no legal. La situaci\u00f3n de los habitantes de las Islas Malvinas es muy delicada y es importante que se respete la soberan\u00eda territorial de cada pa\u00eds. Si tienes alguna otra pregunta o necesitas informaci\u00f3n sobre un tema espec\u00edfico, estar\u00e9 encantado de ayudarte.",
+            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre la situaci\u00f3n actual de los habitantes de las Islas Malvinas. Esta informaci\u00f3n es de naturaleza pol\u00edtica y no est\u00e1 disponible en la informaci\u00f3n que me proporcionaste. Si necesitas informaci\u00f3n sobre la situaci\u00f3n actual de los habitantes de las Islas Malvinas, te recomendar\u00eda consultar fuentes oficiales o expertos en la regi\u00f3n.",
             "reference": "mantenerse como s\u00fabditos de la corona brit\u00e1nica",
-            "faithfulness": 0.0,
+            "faithfulness": 0.25,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.0835218938109627,
+            "answer_correctness": 0.07216385278613895,
             "context_precision": 0.19999999998,
             "context_recall": 1.0,
-            "semantic_similarity": 0.3340911143343287
+            "semantic_similarity": 0.28856511494663295
         },
         {
             "user_input": "\u00bfQui\u00e9n exigi\u00f3 a Reino Unido negociar la soberan\u00eda de las islas?",
@@ -467,7 +467,7 @@
             "reference": "Adalberto Rodr\u00edguez Giavarini",
             "faithfulness": 0.6666666666666666,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.015973810179071055,
+            "answer_correctness": 0.01596996398286918,
             "context_precision": 0.19999999998,
             "context_recall": 1.0,
             "semantic_similarity": 0.06387985593147671
@@ -486,14 +486,14 @@
                 "Observadores de la Uni\u00f3n Europea declararon que la campa\u00f1a y las elecciones fueron \"las elecciones m\u00e1s genuinas y competitivas del pa\u00eds\", aunque se reportaron varias violaciones a derechos humanos. ",
                 "El martes pasado, al hablar ante el Comit\u00e9 de Descolonizaci\u00f3n de las Naciones Unidas, el canciller argentino, Adalberto Rodr\u00edguez Giavarini, reclam\u00f3 al Reino Unido que \"no desoiga\" el llamamiento de los organismos internacionales para que se abra una negociaci\u00f3n formal sobre soberan\u00eda. "
             ],
-            "response": "Lo siento, pero no tengo informaci\u00f3n espec\u00edfica sobre cu\u00e1ndo se retomaron las relaciones diplom\u00e1ticas entre pa\u00edses. Sin embargo, en general, la retomada de las relaciones diplom\u00e1ticas entre pa\u00edses puede variar dependiendo de varios factores, incluyendo la pol\u00edtica de los pa\u00edses, la situaci\u00f3n econ\u00f3mica y pol\u00edtica, la situaci\u00f3n pol\u00edtica interna de los pa\u00edses, y la capacidad de los pa\u00edses para establecer relaciones diplom\u00e1ticas. Sin embargo, en general, la retomada de las relaciones diplom\u00e1ticas entre pa\u00edses puede ser un proceso gradual y dependiente de la cooperaci\u00f3n y la cooperaci\u00f3n entre los pa\u00edses.",
+            "response": "Lo siento, pero no tengo informaci\u00f3n espec\u00edfica sobre cu\u00e1ndo se retomaron las relaciones diplom\u00e1ticas entre pa\u00edses. La informaci\u00f3n sobre relaciones diplom\u00e1ticas puede variar dependiendo de la regi\u00f3n y el contexto hist\u00f3rico. Sin embargo, en general, la mayor\u00eda de los pa\u00edses han mantenido relaciones diplom\u00e1ticas con los Estados Unidos desde la Guerra Fr\u00eda y contin\u00faan manteniendo relaciones con ellos.",
             "reference": "1990",
             "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.04178543169282978,
+            "answer_correctness": 0.04489727397468984,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.1671417267713191
+            "semantic_similarity": 0.1795917873591897
         },
         {
             "user_input": "\u00bfD\u00f3nde tuvieron lugar las negociaciones entre los pa\u00edses?",
@@ -509,14 +509,14 @@
                 "\"El 12 de julio de 2000, varios barcos pesqueros con registro argentino, que se encontraban en la zona econ\u00f3mica exclusiva argentina, fueron sobrevolados por aeronaves brit\u00e1nicas con asiento en las islas Malvinas\", seg\u00fan el comunicado difundido por la Direcci\u00f3n de Prensa de la Canciller\u00eda. ",
                 "Actualmente se desarrolla el concurso Mujeres Iberoamericanas."
             ],
-            "response": "Lo siento, pero no tengo informaci\u00f3n sobre las negociaciones entre pa\u00edses espec\u00edficas en este documento. El documento proporciona informaci\u00f3n general sobre la situaci\u00f3n pol\u00edtica y econ\u00f3mica de los pa\u00edses, pero no menciona detalles espec\u00edficos sobre las negociaciones entre ellos. Para obtener informaci\u00f3n precisa sobre las negociaciones entre pa\u00edses, te recomendar\u00eda buscar informaci\u00f3n en fuentes oficiales o en medios de comunicaci\u00f3n de los pa\u00edses involucrados.",
+            "response": "Lo siento, pero no tengo informaci\u00f3n sobre las negociaciones entre pa\u00edses espec\u00edficas. Sin embargo, en general, las negociaciones entre pa\u00edses suelen llevar lugar en eventos como la Asamblea General de los Estados Unidos, la Asamblea General de los Estados Unidos, la Asamblea General de los Estados Unidos, la Asamblea General de los Estados Unidos, la Asamblea General de los Estados Unidos, la Asamblea General de los Estados Unidos, la Asamblea General de los Estados Unidos, la Asamblea General de los Estados Unidos, la Asamblea General de los Estados Unidos, la Asamble",
             "reference": "Madrid",
-            "faithfulness": 0.5,
+            "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.02810109916635071,
+            "answer_correctness": 0.03620243594495663,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.11240439666540283
+            "semantic_similarity": 0.14479177012576327
         },
         {
             "user_input": "\u00bfD\u00f3nde se localiz\u00f3 el epicentro del se\u00edsmo?",
@@ -532,14 +532,14 @@
                 "Pero en el momento que las poblaciones de los cet\u00e1ceos m\u00e1s grandes disminuy\u00f3, se convirti\u00f3 en blanco de los balleneros de principios del siglo XX. ",
                 "Toda una vida dedicada al ciclismo deja huella. "
             ],
-            "response": "El epicentro del seismismo en M\u00e9xico se localiza en la regi\u00f3n de la Ciudad de M\u00e9xico, en la Ciudad de M\u00e9xico, en la Ciudad de M\u00e9xico.",
+            "response": "El epicentro del seismismo en M\u00e9xico se localiza en la regi\u00f3n de la Ciudad de M\u00e9xico, espec\u00edficamente en la zona de la Ciudad de M\u00e9xico, en la ciudad de Tlalnepantla.",
             "reference": "50 km bajo tierra en la prefectura de Ibaraki, al noreste de la capital Tokio",
             "faithfulness": 0.0,
             "answer_relevancy": 0.7359387770439813,
-            "answer_correctness": 0.0723822384749274,
+            "answer_correctness": 0.07105386803667371,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.28990140225157335
+            "semantic_similarity": 0.2837868362502653
         },
         {
             "user_input": "\u00bfDe qu\u00e9 magnitud era el temblor registrado?",
@@ -555,14 +555,14 @@
                 "El incidente se produjo el 12 de julio cerca de las islas Malvinas, que est\u00e1n bajo dominio brit\u00e1nico y por cuya soberan\u00eda Argentina y el Reino Unido se enfrentaron en una guerra de 74 d\u00edas en 1982, que dej\u00f3 un millar de muertos entre ambos bandos beligerantes. ",
                 "Las c\u00e9lulas suelen poseer un tama\u00f1o de 10 \u00b5m y una masa de 1 ng, si bien existen c\u00e9lulas mucho mayores."
             ],
-            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre un temblor espec\u00edfico que ocurri\u00f3 en un lugar espec\u00edfico. Como asistente de inteligencia artificial, no tengo la capacidad de acceder a datos espec\u00edficos o de la informaci\u00f3n de lugar. Para obtener informaci\u00f3n precisa sobre un temblor, necesitar\u00eda acceder a datos de geolocalizaci\u00f3n o a informaci\u00f3n de lugar.",
+            "response": "Lo siento, pero no tengo la informaci\u00f3n necesaria para determinar la magnitud del temblor registrado. Para poder ayudarte, necesitar\u00eda que proporcionaras m\u00e1s detalles sobre el temblor espec\u00edfico que est\u00e1s hablando.",
             "reference": "5,1 grados",
-            "faithfulness": 0.0,
+            "faithfulness": 1.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.07128416579494243,
+            "answer_correctness": 0.08623760678936421,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.2854642960999433
+            "semantic_similarity": 0.34498264586062183
         },
         {
             "user_input": "\u00bfQui\u00e9n es el fara\u00f3n egipcio m\u00e1s conocido?",
@@ -578,14 +578,14 @@
                 "\"Me gustar\u00eda disculparme por el retraso. ",
                 "Toda una vida dedicada al ciclismo deja huella. "
             ],
-            "response": "El fara\u00f3n egipcio m\u00e1s conocido es T\u00e9fis, tambi\u00e9n conocido como Tefis II o Tefis III. Es un fara\u00f3n de la Edad de Hielo (1550-1530 a.C.) y un rey de la dinast\u00eda de T\u00e9fis.",
+            "response": "El fara\u00f3n egipcio m\u00e1s conocido es T\u00e9fis, tambi\u00e9n conocido como Tefis II o Tefis III. Aqu\u00ed te explico algunos puntos importantes sobre \u00e9l:\n\n1. Nacimiento: T\u00e9fis fue fundador de la dinast\u00eda T\u00e9fis en 1893.\n\n2. Muerte: Falleci\u00f3 en 1904.\n\n3. T\u00e9fis II: Fue el primer fara\u00f3n de la dinast\u00eda T\u00e9fis, que dur\u00f3 hasta 1904.\n\n4. T\u00e9fis III: F",
             "reference": "Rams\u00e9s II",
             "faithfulness": 0.0,
             "answer_relevancy": 0.9999999999999991,
-            "answer_correctness": 0.12333918841633275,
+            "answer_correctness": 0.11027391805496226,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.493356753665331
+            "semantic_similarity": 0.4411534756133804
         },
         {
             "user_input": "\u00bfQu\u00e9 material fue empleado para edificar el templo?",
@@ -601,14 +601,14 @@
                 "La de Miguel, en recobrarla. ",
                 "Los resultados preliminares mostraban que el partido en el gobierno y sus aliados ten\u00edan suficientes sillas para formar el pr\u00f3ximo gobierno de la naci\u00f3n de 72.000.000 de habitantes. "
             ],
-            "response": "El templo de Jerusal\u00e9n, tambi\u00e9n conocido como Templo de Jerusal\u00e9n, fue construido principalmente de piedra de hierro. Esta construcci\u00f3n fue realizada por el arquitecto y arquitecto jud\u00edo Hiram, quien fue el encargado de la construcci\u00f3n del templo. El templo fue construido en el siglo III de la era del Templo de Jerusal\u00e9n, aproximadamente entre 1000 y 586 a.C.",
+            "response": "El templo que fue edificado en Jerusal\u00e9n fue construido principalmente de piedra de caucho.",
             "reference": "piedra caliza",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.6991622453759189,
-            "answer_correctness": 0.0549106276480768,
+            "answer_relevancy": 0.833993878630967,
+            "answer_correctness": 0.08212826343236505,
             "context_precision": 0.14285714284285714,
             "context_recall": 1.0,
-            "semantic_similarity": 0.2196425105923072
+            "semantic_similarity": 0.3285130537294602
         },
         {
             "user_input": "\u00bfD\u00f3nde fueron descubiertos los restos hist\u00f3ricos?",
@@ -624,14 +624,14 @@
                 "El martes pasado, al hablar ante el Comit\u00e9 de Descolonizaci\u00f3n de las Naciones Unidas, el canciller argentino, Adalberto Rodr\u00edguez Giavarini, reclam\u00f3 al Reino Unido que \"no desoiga\" el llamamiento de los organismos internacionales para que se abra una negociaci\u00f3n formal sobre soberan\u00eda. ",
                 "Gran conquistador, Rams\u00e9s II, tambi\u00e9n conocido como Rams\u00e9s el Grande, que gobern\u00f3 desde 1279 a 1237 a.C., es el m\u00e1s famoso de todos faraones."
             ],
-            "response": "Los restos hist\u00f3ricos se encuentran en varias partes del mundo, pero generalmente se encuentran en:\n\n1. Am\u00e9rica del Sur: En la regi\u00f3n de la Ant\u00e1rtida, en la pen\u00ednsula de la Ant\u00e1rtida, en la isla de la Ant\u00e1rtida, en la isla de la Ant\u00e1rtida, en la isla de la Ant\u00e1rtida, en la isla de la Ant\u00e1rtida, en la isla de la Ant\u00e1rtida, en la isla de la Ant\u00e1rtida, en la isla de la Ant\u00e1rtida",
+            "response": "Los restos hist\u00f3ricos se encuentran en varias partes del mundo, pero generalmente se encuentran en:\n\n1. Am\u00e9rica del Sur: En el pa\u00eds de Bolivia, se encuentran los restos de la civilizaci\u00f3n maya.\n\n2. Am\u00e9rica Central: En el pa\u00eds de Guatemala, se encuentran los restos de la civilizaci\u00f3n maya.\n\n3. Am\u00e9rica del Norte: En el pa\u00eds de M\u00e9xico, se encuentran los restos de la civilizaci\u00f3n maya.\n\n4. Am\u00e9rica del Oeste: En el pa\u00eds de Guatemala, se encuentran los restos de la civilizaci\u00f3n maya.\n\n5. Am\u00e9rica del Este",
             "reference": "el distrito de A\u00efn Shams",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.0,
-            "answer_correctness": 0.029649122545158307,
+            "answer_relevancy": 0.5725870888720196,
+            "answer_correctness": 0.025006485399093968,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.11856565511849938
+            "semantic_similarity": 0.09994304133209157
         },
         {
             "user_input": "\u00bfCu\u00e1l es la traducci\u00f3n literal del vocablo ingl\u00e9s \"football\"?",
@@ -650,11 +650,11 @@
             "response": "La traducci\u00f3n literal del vocablo ingl\u00e9s \"football\" es \"f\u00fatbol\".",
             "reference": "balompi\u00e9",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.8911402898576258,
-            "answer_correctness": 0.054396601863638434,
+            "answer_relevancy": 0.8912047681411215,
+            "answer_correctness": 0.05438714700668108,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.21758640745455374
+            "semantic_similarity": 0.21754858802672433
         },
         {
             "user_input": "\u00bfCu\u00e1ntos equipos participan en un partido de f\u00fatbol?",
@@ -677,7 +677,7 @@
             "answer_correctness": 0.04213822890104123,
             "context_precision": 0.5833333333041666,
             "context_recall": 0.0,
-            "semantic_similarity": 0.1685529156041649
+            "semantic_similarity": 0.16862461036705667
         },
         {
             "user_input": "\u00bfEn qu\u00e9 pa\u00edses el t\u00e9rmino \"football\" se refiere al f\u00fatbol americano?",
@@ -693,14 +693,14 @@
                 "\"Esta Canciller\u00eda est\u00e1 formulando la correspondiente protesta al Gobierno brit\u00e1nico por esa violaci\u00f3n del espacio a\u00e9reo argentino\", agrega la declaraci\u00f3n. ",
                 "Dos prop\u00f3sitos igualmente dif\u00edciles pero indispensables para sentarse en el trono soleado de julio. "
             ],
-            "response": "El t\u00e9rmino \"football\" se refiere al f\u00fatbol americano en varios pa\u00edses, pero espec\u00edficamente en Estados Unidos, el f\u00fatbol americano es el deporte m\u00e1s popular y popularizado en el mundo. Sin embargo, en algunos pa\u00edses de Am\u00e9rica Latina, el f\u00fatbol americano tambi\u00e9n se conoce como \"f\u00fatbol americano\".",
+            "response": "El t\u00e9rmino \"football\" se refiere al f\u00fatbol americano en varios pa\u00edses, pero espec\u00edficamente en Estados Unidos, el f\u00fatbol americano es conocido como \"soccer\" en otros pa\u00edses.",
             "reference": "Estados Unidos y Canad\u00e1",
-            "faithfulness": 0.3333333333333333,
-            "answer_relevancy": 0.7550247450959903,
-            "answer_correctness": 0.4888299905198624,
+            "faithfulness": 0.5,
+            "answer_relevancy": 0.7145003128366252,
+            "answer_correctness": 0.3661164740413353,
             "context_precision": 0.49999999995,
             "context_recall": 1.0,
-            "semantic_similarity": 0.24094283633542468
+            "semantic_similarity": 0.26453011614942473
         },
         {
             "user_input": "\u00bfQu\u00e9 porcentaje de la poblaci\u00f3n mundial juega de forma habitual a f\u00fatbol?",
@@ -716,14 +716,14 @@
                 "Actualmente se desarrolla el concurso Mujeres Iberoamericanas.",
                 "Dicha cifra representa alrededor del 4 % de la poblaci\u00f3n mundial. "
             ],
-            "response": "La mayor\u00eda de la poblaci\u00f3n mundial juega de forma habitual a f\u00fatbol. Seg\u00fan datos recientes, aproximadamente 70% de la poblaci\u00f3n mundial juega de forma habitual a f\u00fatbol. Esto incluye a los jugadores de f\u00fatbol, los aficionados y los espectadores.",
+            "response": "La poblaci\u00f3n mundial juega de forma habitual a f\u00fatbol en aproximadamente 10-15% de la poblaci\u00f3n. Esto se puede calcular a trav\u00e9s de la siguiente f\u00f3rmula:\n\n1. Calculamos el porcentaje de la poblaci\u00f3n mundial que juega de forma habitual a f\u00fatbol:\n   10% + 15% = 25%\n\nPor lo tanto, aproximadamente 25% de la poblaci\u00f3n mundial juega de forma habitual a f\u00fatbol.",
             "reference": "4 %",
-            "faithfulness": 0.2,
-            "answer_relevancy": 0.9999994192029109,
-            "answer_correctness": 0.033857169185463484,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.9999993940912274,
+            "answer_correctness": 0.038924563093976045,
             "context_precision": 0.09999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.13544986566645284
+            "semantic_similarity": 0.15569825237590418
         },
         {
             "user_input": "\u00bfCu\u00e1l es la confederaci\u00f3n con un menor porcentaje de personas activamente involucradas con el f\u00fatbol?",
@@ -742,7 +742,7 @@
             "response": "La confederaci\u00f3n con un menor porcentaje de personas activamente involucradas con el f\u00fatbol es la Confederaci\u00f3n Sudamericana de F\u00fatbol (CONMEBOL).",
             "reference": "la AFC",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9876403526127172,
+            "answer_relevancy": 0.9876542681656941,
             "answer_correctness": 0.08037925353497065,
             "context_precision": 0.0,
             "context_recall": 0.0,
@@ -765,8 +765,8 @@
             "response": "El n\u00famero de equipos de f\u00fatbol en el mundo es de aproximadamente 190.",
             "reference": "m\u00e1s de 1,7 millones",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9999994482947455,
-            "answer_correctness": 0.07578400189798529,
+            "answer_relevancy": 0.9999999999999991,
+            "answer_correctness": 0.0758001943674241,
             "context_precision": 0.249999999975,
             "context_recall": 1.0,
             "semantic_similarity": 0.30313600759194115
@@ -785,14 +785,14 @@
                 "La de Miguel, en recobrarla. ",
                 "Desarrollo en el mundo \nSeg\u00fan una encuesta realizada por la FIFA en el a\u00f1o 2006, aproximadamente 270 millones de personas en el mundo est\u00e1n activamente involucradas en el f\u00fatbol, incluyendo a futbolistas, \u00e1rbitros y directivos. "
             ],
-            "response": "La Copa Mundial de F\u00fatbol comenz\u00f3 el 1 de julio de 1930.",
+            "response": "La Copa Mundial de F\u00fatbol comenz\u00f3 el 15 de octubre de 1950.",
             "reference": "1930",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9276761498935833,
-            "answer_correctness": 0.8415733010328863,
+            "answer_relevancy": 0.8114103992342757,
+            "answer_correctness": 0.06302091873251134,
             "context_precision": 0.49999999995,
             "context_recall": 1.0,
-            "semantic_similarity": 0.36629320413154515
+            "semantic_similarity": 0.2520112985511803
         },
         {
             "user_input": "\u00bfCu\u00e1l era la m\u00e1xima competici\u00f3n futbol\u00edstica antes de la creaci\u00f3n de la Copa Mundial de F\u00fatbol?",
@@ -808,14 +808,14 @@
                 "Existen m\u00e1s de 1,7 millones de equipos en el mundo y aproximadamente 301 000 clubes.",
                 "La UEFA tiene un porcentaje de participaci\u00f3n del 7,59 %; la CONMEBOL de 7,47 %; la OFC de 4,68 %; y la Confederaci\u00f3n Africana de F\u00fatbol del 5,16 %. "
             ],
-            "response": "La m\u00e1xima competici\u00f3n futbol\u00edstica antes de la creaci\u00f3n de la Copa Mundial de F\u00fatbol era la Copa del Rey de Espa\u00f1a. Esta competici\u00f3n se celebr\u00f3 desde 1929 y fue la primera competici\u00f3n de f\u00fatbol profesional en Espa\u00f1a.",
+            "response": "La m\u00e1xima competici\u00f3n futbol\u00edstica antes de la creaci\u00f3n de la Copa Mundial de F\u00fatbol era la Copa del Rey de Espa\u00f1a. Esta competici\u00f3n se desarroll\u00f3 desde 1929 y fue la primera competici\u00f3n de f\u00fatbol profesional en Espa\u00f1a.",
             "reference": "la competici\u00f3n de f\u00fatbol de los Juegos Ol\u00edmpico",
             "faithfulness": 0.0,
             "answer_relevancy": 0.9999999999999992,
-            "answer_correctness": 0.10379988703360868,
+            "answer_correctness": 0.10406810391757286,
             "context_precision": 0.3333333333,
             "context_recall": 1.0,
-            "semantic_similarity": 0.41519666149386636
+            "semantic_similarity": 0.41627241567029144
         },
         {
             "user_input": "\u00bfC\u00f3mo se llama la Copa Mundial a nivel femenino?",
@@ -831,14 +831,14 @@
                 "\"El 12 de julio de 2000, varios barcos pesqueros con registro argentino, que se encontraban en la zona econ\u00f3mica exclusiva argentina, fueron sobrevolados por aeronaves brit\u00e1nicas con asiento en las islas Malvinas\", seg\u00fan el comunicado difundido por la Direcci\u00f3n de Prensa de la Canciller\u00eda. ",
                 "El martes pasado, al hablar ante el Comit\u00e9 de Descolonizaci\u00f3n de las Naciones Unidas, el canciller argentino, Adalberto Rodr\u00edguez Giavarini, reclam\u00f3 al Reino Unido que \"no desoiga\" el llamamiento de los organismos internacionales para que se abra una negociaci\u00f3n formal sobre soberan\u00eda. "
             ],
-            "response": "La Copa Mundial de F\u00fatbol femenino se llama la Copa Mundial de la FIFA.",
+            "response": "La Copa Mundial de la FIFA a nivel femenino se llama la Copa Am\u00e9rica.",
             "reference": "Copa Mundial Femenina de F\u00fatbol",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.7367323830496787,
-            "answer_correctness": 0.6924856606088028,
+            "answer_relevancy": 0.7126807077570126,
+            "answer_correctness": 0.16882214620710279,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.7699426424352109
+            "semantic_similarity": 0.6753592787109179
         },
         {
             "user_input": "\u00bfCu\u00e1l es la probabilidad que tienen las orcas de morir en su primer medio a\u00f1o de vida?",
@@ -854,14 +854,14 @@
                 "Mientras que la atribuci\u00f3n no es legalmente obligatoria, ser\u00eda agradecida.",
                 "Mientras que la atribuci\u00f3n no es legalmente obligatoria, ser\u00eda agradecida."
             ],
-            "response": "La probabilidad de morir en el primer medio a\u00f1o de vida de una orca es de aproximadamente 10%. Esta probabilidad se basa en la distribuci\u00f3n de la vida de las orcas en el mar, donde la mayor\u00eda de las orcas morir\u00e1n en menos de 10 a\u00f1os.",
+            "response": "La probabilidad de morir en el primer medio a\u00f1o de vida de una orca es de aproximadamente 10%. Esta probabilidad se basa en la distribuci\u00f3n de probabilidad de la vida de las orcas en el mar, que se considera una distribuci\u00f3n normal con media 1.5 a\u00f1os y desviaci\u00f3n est\u00e1ndar de 1.5 a\u00f1os.",
             "reference": "extremadamente alta",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9465641649329211,
-            "answer_correctness": 0.046823112537122645,
+            "answer_relevancy": 0.9315743143571523,
+            "answer_correctness": 0.053926111207995626,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.1870171053958058
+            "semantic_similarity": 0.21575517640841368
         },
         {
             "user_input": "\u00bfCu\u00e1l es la mortalidad de las orcas que tienen entre 10,5 y 14,5 a\u00f1os?",
@@ -877,14 +877,14 @@
                 "A pesar de ello, en Noruega, la caza de orcas ha sido siempre un objetivo secundario para su industria ballenera y aunque ocasionalmente se ha destinado al consumo humano, el destino fundamental de la carne ha sido el consumo animal. ",
                 "De hecho, la c\u00e9lula es el elemento de menor tama\u00f1o que puede considerarse vivo.\u200b De este modo, puede clasificarse a los organismos vivos seg\u00fan el n\u00famero de c\u00e9lulas que posean: si solo tienen una, se les denomina unicelulares (como pueden ser los protozoos o las bacterias, organismos microsc\u00f3picos); si poseen m\u00e1s, se les llama pluricelulares. "
             ],
-            "response": "La mortalidad de las orcas que tienen entre 10,5 y 14,5 a\u00f1os var\u00eda dependiendo de varios factores, incluyendo la especie, el tama\u00f1o de la orca, su edad, su estado de salud y la calidad de la vida de la poblaci\u00f3n en general. Sin embargo, generalmente se estiman que la mortalidad de estas especies puede ser de 10-20% a 30-40% en el rango de edad mencionado.\n\nEs importante notar que la mortalidad de las orcas puede variar significativamente dependiendo",
+            "response": "La mortalidad de las orcas que tienen entre 10,5 y 14,5 a\u00f1os var\u00eda dependiendo de varios factores, incluyendo la especie, la edad de la orca, su estado de salud, y su situaci\u00f3n en el mar. Sin embargo, generalmente, las orcas de esta edad generalmente tienen una mortalidad de entre 10% y 20% en el mar.\n\nEs importante notar que la mortalidad de las orcas puede variar significativamente dependiendo de la especie y la ubicaci\u00f3n. Por ejemplo, las orcas de la espec",
             "reference": "0,5 %",
             "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.03991925317525945,
+            "answer_correctness": 0.03946372256306202,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.1597273400271066
+            "semantic_similarity": 0.15782391228842402
         },
         {
             "user_input": "\u00bfC\u00f3mo es la esperanza de vida de las orcas silvestres en comparaci\u00f3n de las que viven en cautividad?",
@@ -900,14 +900,14 @@
                 "Toda una vida dedicada al ciclismo deja huella. ",
                 "Con una poblaci\u00f3n generalmente favorable a los Aliados, el Gobierno tuvo que sopesar, sin embargo, la importancia y cercan\u00eda de las potencias del Eje. "
             ],
-            "response": "La esperanza de vida de las orcas silvestres en comparaci\u00f3n de las que viven en cautividad es muy baja. Seg\u00fan datos recientes, las orcas silvestres en cautividad tienen esperanza de vida de aproximadamente 15-20 a\u00f1os, mientras que las que viven en el mar natural tienen esperanza de vida de aproximadamente 20-30 a\u00f1os. Esto significa que las orcas silvestres en cautividad viven mucho m\u00e1s tiempo que las que viven en el mar natural.",
+            "response": "La esperanza de vida de las orcas silvestres en comparaci\u00f3n de las que viven en cautividad es muy baja. Seg\u00fan datos recientes, las orcas silvestres en cautividad tienen una esperanza de vida de aproximadamente 15-20 a\u00f1os, mientras que las que viven en el mar o en el agua son m\u00e1s largas, generalmente entre 20-30 a\u00f1os. Esto se debe a factores como la falta de recursos para cuidar a las orcas, la falta de alimento y la falta de espacio para vivir.",
             "reference": "similar",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9854386327131445,
-            "answer_correctness": 0.012423243734758185,
+            "answer_relevancy": 0.9854307375418522,
+            "answer_correctness": 0.011467362017615352,
             "context_precision": 0.9999999999,
             "context_recall": 0.0,
-            "semantic_similarity": 0.04969297493903274
+            "semantic_similarity": 0.04586944807046141
         },
         {
             "user_input": "\u00bfCu\u00e1ndo se empezaron a comercializar las capturas cineg\u00e9ticas de orcas en Jap\u00f3n?",
@@ -923,14 +923,14 @@
                 "Los barcos argentinos operaban en esa zona como forma de protesta ante la decisi\u00f3n del Gobierno argentino por las limitaciones impuestas a la captura de merluza. ",
                 "Los animales en cautividad tienen una esperanza de vida similar a los individuos silvestres y una mayor tasa de supervivencia de cr\u00edas (96%)"
             ],
-            "response": "Las capturas cineg\u00e9ticas de orcas en Jap\u00f3n comenzaron a ser comercializadas en 2010.",
+            "response": "No hay evidencia clara de que las capturas cineg\u00e9ticas de orcas en Jap\u00f3n comenzaran a comercializarse. La captura de orcas en Jap\u00f3n ha estado prohibida desde 1978, y la mayor\u00eda de las orcas en Jap\u00f3n est\u00e1n protegidas por ley. Adem\u00e1s, la captura de orcas en Jap\u00f3n ha estado prohibida desde 1986, y la mayor\u00eda de las orcas en Jap\u00f3n est\u00e1n protegidas por ley.\n\nSin embargo, es posible que haya alg\u00fan tipo de comercializaci\u00f3n de orcas en Jap\u00f3n",
             "reference": "siglo XVIII",
-            "faithfulness": 0.0,
-            "answer_relevancy": 0.9946227388373927,
-            "answer_correctness": 0.028034996346662996,
+            "faithfulness": 0.16666666666666666,
+            "answer_relevancy": 0.0,
+            "answer_correctness": 0.02343447665365943,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.11013058618425112
+            "semantic_similarity": 0.09373790661463773
         },
         {
             "user_input": "\u00bfPor qu\u00e9 no se cazaban tantas orcas como ballenas y cachalotes?",
@@ -946,14 +946,14 @@
                 "Actualmente se desarrolla el concurso Mujeres Iberoamericanas.",
                 "Argentina protest\u00f3 hoy formalmente ante el Gobierno brit\u00e1nico por la \"violaci\u00f3n del espacio a\u00e9reo\" de este pa\u00eds suramericano por parte de aviones que volaron sobre una flota de buques pesqueros que operaba en aguas del Atl\u00e1ntico Sur. "
             ],
-            "response": "La cazadura de orcas, ballenas y cachalotes es un problema significativo debido a varios factores:\n\n1. Defensa de la vida: Estas especies son grandes y peligrosas para los humanos. La cazadura de estas especies puede causar da\u00f1os graves a los humanos y a los animales que la rodean.\n\n2. Consumo de alimentos: Las orcas, ballenas y cachalotes son consumidores de peque\u00f1os animales, como peque\u00f1os peces y aves. La cazadura de estas especies puede causar da\u00f1os significativos a",
+            "response": "La cazadura de orcas, ballenas y cachalotes es un problema significativo debido a varios factores:\n\n1. Defensa de la vida: Estas especies son grandes y peligrosas para los humanos. La cazadura de estas especies puede causar da\u00f1os graves a los humanos y a los animales que la cazan.\n\n2. Consumo de alimentos: Las orcas, ballenas y cachalotes son consumidores de diferentes tipos de alimentos, incluyendo peces, aves y otros animales. La cazadura de estas especies puede afectar la",
             "reference": "debido a la escasa cantidad de aceite que pod\u00eda obtenerse de ellas",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.6664561558374363,
-            "answer_correctness": 0.06646018228502912,
+            "answer_relevancy": 0.0,
+            "answer_correctness": 0.06531655780584095,
             "context_precision": 0.16666666665,
             "context_recall": 1.0,
-            "semantic_similarity": 0.2658335112365676
+            "semantic_similarity": 0.2616612725218874
         },
         {
             "user_input": "\u00bfD\u00f3nde se cazaban principalmente las orcas entre 1920 y 1940?",
@@ -969,14 +969,14 @@
                 "A pesar de ello, en Noruega, la caza de orcas ha sido siempre un objetivo secundario para su industria ballenera y aunque ocasionalmente se ha destinado al consumo humano, el destino fundamental de la carne ha sido el consumo animal. ",
                 "La de Miguel, en recobrarla. "
             ],
-            "response": "La cazad de orcas entre 1920 y 1940 se realiz\u00f3 principalmente en el Mar de los Estados Unidos, espec\u00edficamente en el \u00e1rea de la costa del Pac\u00edfico. Aqu\u00ed hay algunos detalles adicionales:\n\n1. La mayor\u00eda de las orcas cazadas se encontraban en el mar de los Estados Unidos, principalmente en el \u00e1rea de la costa del Pac\u00edfico.\n\n2. La mayor\u00eda de las orcas cazadas se encontraban en el mar de los Estados Unidos, principalmente en el \u00e1rea de la costa del Pac\u00edfico.\n\n3. La mayor\u00eda de las orcas cazadas se",
+            "response": "La cazad de orcas entre 1920 y 1940 se realiz\u00f3 principalmente en el Pac\u00edfico, espec\u00edficamente en:\n\n1. El Mar de Baja California (M\u00e9xico)\n2. El Mar de Baja California Sur (M\u00e9xico)\n3. El Mar de Baja California Norte (M\u00e9xico)\n4. El Mar de Baja California Oeste (M\u00e9xico)\n5. El Mar de Baja California Sur (M\u00e9xico)\n6. El Mar de Baja California Norte (M\u00e9xico)\n7. El Mar de Baja California Oeste (M",
             "reference": "en Noruega, Uni\u00f3n Sovi\u00e9tica y Jap\u00f3n",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9405242818225038,
-            "answer_correctness": 0.05829467935720819,
+            "answer_relevancy": 0.9404700217062638,
+            "answer_correctness": 0.06107887343383282,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.23279954360107408
+            "semantic_similarity": 0.2443154937353313
         },
         {
             "user_input": "\u00bfQui\u00e9n lidera la asociaci\u00f3n?",
@@ -992,14 +992,14 @@
                 "Mientras que la atribuci\u00f3n no es legalmente obligatoria, ser\u00eda agradecida.",
                 "\"Esta Canciller\u00eda est\u00e1 formulando la correspondiente protesta al Gobierno brit\u00e1nico por esa violaci\u00f3n del espacio a\u00e9reo argentino\", agrega la declaraci\u00f3n. "
             ],
-            "response": "Lo siento, pero no tengo informaci\u00f3n sobre qui\u00e9n lidera la asociaci\u00f3n espec\u00edfica que est\u00e1s preguntando sobre. Para obtener la informaci\u00f3n necesaria, necesitar\u00eda que proporcionaras m\u00e1s detalles o contexto.",
+            "response": "Lo siento, pero no tengo informaci\u00f3n sobre qui\u00e9n lidera la asociaci\u00f3n espec\u00edfica que est\u00e1s preguntando sobre. Para obtener informaci\u00f3n precisa sobre la lideranza de una asociaci\u00f3n, necesitar\u00eda conocer m\u00e1s detalles sobre la asociaci\u00f3n en particular. Si tienes m\u00e1s contexto o detalles sobre la asociaci\u00f3n, estar\u00e9 encantado de ayudarte a encontrar la informaci\u00f3n necesaria.",
             "reference": "\u00c1ngeles Bueno",
-            "faithfulness": 0.5,
+            "faithfulness": 0.3333333333333333,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.058949795233119794,
+            "answer_correctness": 0.05125231221175004,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.23571901283188446
+            "semantic_similarity": 0.20493522909970446
         },
         {
             "user_input": "\u00bfC\u00f3mo se llama la actividad organizada por la asociaci\u00f3n?",
@@ -1018,11 +1018,11 @@
             "response": "La actividad organizada por la asociaci\u00f3n es conocida como \"Asociaci\u00f3n\".",
             "reference": "Wikipedia es cosa de mujeres",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9999999999999996,
+            "answer_relevancy": 0.9999995476829208,
             "answer_correctness": 0.055918264144919426,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.2236730565796777
+            "semantic_similarity": 0.22359158735170281
         },
         {
             "user_input": "\u00bfCu\u00e1ndo comenzaron las manifestaciones en el pa\u00eds africano?",
@@ -1038,14 +1038,14 @@
                 "Actualmente se desarrolla el concurso Mujeres Iberoamericanas.",
                 "Toda una vida dedicada al ciclismo deja huella. "
             ],
-            "response": "Lo siento, pero no tengo la informaci\u00f3n necesaria para responder a esta pregunta. No tengo acceso a datos hist\u00f3ricos o datos espec\u00edficos sobre las manifestaciones en el pa\u00eds africano. Para obtener informaci\u00f3n precisa sobre el inicio de las manifestaciones en un pa\u00eds particular, necesitar\u00eda acceder a fuentes oficiales de noticias o datos hist\u00f3ricos.",
+            "response": "Lo siento, pero no tengo informaci\u00f3n precisa sobre el inicio de las manifestaciones en el pa\u00eds africano. Sin embargo, puedo proporcionarte informaci\u00f3n general sobre c\u00f3mo se desarrollan las manifestaciones en pa\u00edses africanos:\n\n1. En el caso de \u00c1frica del Sur, las manifestaciones se han desarrollado desde hace d\u00e9cadas, pero han tenido un impacto significativo en el contexto pol\u00edtico y social.\n\n2. En el caso de \u00c1frica del Norte, las manifestaciones han sido m\u00e1s frecuentes en los \u00faltimos a\u00f1os debido a la crisis econ\u00f3mica y social que enfrenta el pa\u00eds.\n\n3. En el caso de \u00c1frica del",
             "reference": "tras las elecciones legislativas del pasado 15 de mayo",
             "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.04758836555704628,
+            "answer_correctness": 0.04351813191628262,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.1903534622281851
+            "semantic_similarity": 0.17407252766513048
         },
         {
             "user_input": "\u00bfQu\u00e9 denuncian los opositores de Meles que hubo en los comicios?",
@@ -1061,14 +1061,14 @@
                 "El retraso se debe a que se pretenden afinar detalles con el lector de DVD, que corresponde al nuevo formato Blu-Ray. ",
                 "Las elecciones han sido vistas como un llamado a que Meles reforme su r\u00e9gimen semi-autoritario, dicen analistas. "
             ],
-            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre denuncias o denuncias de opositores de Meles. Como asistente de inteligencia artificial, no tengo acceso a informaci\u00f3n sobre eventos espec\u00edficos o pol\u00edticos. Mi funci\u00f3n es proporcionar informaci\u00f3n basada en el contenido que me proporcionan los usuarios. Si tienes alguna otra pregunta o necesitas ayuda con algo m\u00e1s, estar\u00e9 encantado de ayudarte.",
+            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre denuncias o denuncias de opositores de Meles. Como asistente de inteligencia artificial, no tengo acceso a informaci\u00f3n personal o privada de personas. Mi funci\u00f3n es proporcionar informaci\u00f3n basada en el contenido que me proporcionan los usuarios. Si tienes alguna otra pregunta o necesitas ayuda con algo m\u00e1s, estar\u00e9 encantado de ayudarte.",
             "reference": "fraude y campa\u00f1as de intimidaci\u00f3n",
             "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.08514265279697766,
+            "answer_correctness": 0.08751841224757202,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.34057061118791065
+            "semantic_similarity": 0.3500736489902881
         },
         {
             "user_input": "\u00bfCu\u00e1l es el balance de v\u00edctimas de la violencia en las calles de la capital del pa\u00eds?",
@@ -1084,14 +1084,14 @@
                 "Actualmente se desarrolla el concurso Mujeres Iberoamericanas.",
                 "Argentina protest\u00f3 hoy formalmente ante el Gobierno brit\u00e1nico por la \"violaci\u00f3n del espacio a\u00e9reo\" de este pa\u00eds suramericano por parte de aviones que volaron sobre una flota de buques pesqueros que operaba en aguas del Atl\u00e1ntico Sur. "
             ],
-            "response": "Lo siento, pero no tengo la informaci\u00f3n precisa sobre el balance de v\u00edctimas de la violencia en las calles de la capital del pa\u00eds. Para obtener esa informaci\u00f3n, necesitar\u00eda acceder a datos oficiales del gobierno o a fuentes de informaci\u00f3n espec\u00edfica. Sin acceso a esa informaci\u00f3n, no puedo proporcionar un balance exacto.",
+            "response": "Lo siento, pero no tengo la informaci\u00f3n necesaria para proporcionar un balance de v\u00edctimas de la violencia en las calles de la capital del pa\u00eds. Para poder responder de manera precisa, necesitar\u00eda informaci\u00f3n sobre la capital espec\u00edfica que est\u00e1s hablando. Sin embargo, puedo decirte que la violencia en las calles puede variar significativamente dependiendo del pa\u00eds y del estado. Si tienes m\u00e1s detalles sobre la capital que est\u00e1s buscando, estar\u00e9 encantado de proporcionar informaci\u00f3n m\u00e1s precisa sobre el balance de v\u00edctimas de la violencia en esa regi\u00f3n.",
             "reference": "22 muertos y aproximadamente 100 heridos",
-            "faithfulness": 0.0,
+            "faithfulness": 0.5,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.10309903131642056,
+            "answer_correctness": 0.0946886912832571,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.41239612526568226
+            "semantic_similarity": 0.3788401695859499
         },
         {
             "user_input": "\u00bfQu\u00e9 iniciativa legislativa ha originado controversia en el pa\u00eds norteamericano?",
@@ -1107,14 +1107,14 @@
                 "Unas veces por circunstancias del azar has sido compa\u00f1ero y cuando m\u00e1s a gusto te sientes con ellos, una mala racha quita a alguno de tu entorno ciclista; otras veces son motivos profesionales los que te llevan a un cambio de equipo, pero al final creas un grupo de amigos que s\u00f3lo tiene una publicidad: la amistad. ",
                 "La confederaci\u00f3n con mayor porcentaje de personas activamente involucradas con el f\u00fatbol es la Concacaf, con el 8,53 % de la poblaci\u00f3n. "
             ],
-            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre iniciativas legislativas espec\u00edficas sin m\u00e1s contexto o informaci\u00f3n. La informaci\u00f3n que proporcionaste parece estar relacionada con un pa\u00eds norteamericano, pero no con iniciativas legislativas en general. Si necesitas informaci\u00f3n sobre iniciativas legislativas en general, estar\u00e9 encantado de ayudarte.",
+            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre iniciativas legislativas espec\u00edficas sin m\u00e1s contexto o informaci\u00f3n. La informaci\u00f3n que proporcionaste parece estar relacionada con un pa\u00eds norteamericano, pero no con la controversia que se refiere a la iniciativa legislativa en cuesti\u00f3n. Si necesitas informaci\u00f3n sobre una controversia espec\u00edfica, estar\u00e9 encantado de ayudarte con informaci\u00f3n m\u00e1s espec\u00edfica.",
             "reference": "la aplicaci\u00f3n de la Sharia",
-            "faithfulness": 0.25,
+            "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.0485117711947843,
+            "answer_correctness": 0.05563535605945455,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.1940470847791372
+            "semantic_similarity": 0.2225414242378182
         },
         {
             "user_input": "\u00bfC\u00f3mo ven esta medida sus detractores?",
@@ -1130,14 +1130,14 @@
                 "De parte de su territorio surgieron nuevos pa\u00edses con gobiernos afines al Eje, como el Estado Independiente de Croacia o el Estado Independiente de Montenegro.",
                 "No comprend\u00edan que se trataba de la amistad la que reun\u00eda a corredores de diferentes equipos."
             ],
-            "response": "Lo siento, pero no proporcion\u00e9 ning\u00fan documento o informaci\u00f3n espec\u00edfica para evaluar sus detractores. Para poder ayudarte con eso, necesitar\u00eda que me proporcionaras m\u00e1s detalles o contexto. \u00bfPodr\u00edas proporcionar m\u00e1s detalles sobre la medida que est\u00e1s hablando?",
+            "response": "Lo siento, pero no proporcionaste una medida para analizar. Para poder ayudarte a identificar los detractores de una medida, necesitar\u00eda que me proporcionaras m\u00e1s detalles sobre la medida espec\u00edfica que est\u00e1s hablando. \u00bfPodr\u00edas proporcionar m\u00e1s informaci\u00f3n sobre la medida que est\u00e1s tratando de evaluar?",
             "reference": "un retroceso en los derechos de la mujer",
             "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.05914206518234546,
+            "answer_correctness": 0.05033730260232333,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.23656826072938184
+            "semantic_similarity": 0.20134921040929332
         },
         {
             "user_input": "\u00bfD\u00f3nde se manifestar\u00e1n en contra de la pol\u00e9mica propuesta?",
@@ -1153,14 +1153,14 @@
                 "Argentina y Gran Breta\u00f1a reanudaron sus relaciones diplom\u00e1ticas en 1990, al cabo de una ronda de negociaciones celebradas en Madrid, en aquella ocasi\u00f3n el pa\u00eds suramericano tuvo que aceptar que las discusiones bilaterales dejaran al margen la espinosa cuesti\u00f3n de la soberan\u00eda sobre las Malvinas. ",
                 "Todas compartidas con compa\u00f1eros, apoy\u00e1ndose en ellos y ellos en ti. "
             ],
-            "response": "Lo siento, pero no tengo informaci\u00f3n espec\u00edfica sobre d\u00f3nde se manifestar\u00e1n en contra de la pol\u00e9mica propuesta. Para obtener esa informaci\u00f3n, necesitar\u00eda acceder a un documento o informaci\u00f3n espec\u00edfica sobre la pol\u00e9mica en cuesti\u00f3n. Sin embargo, puedo decirte que, en general, la manifestaci\u00f3n de protesta o protesta contra una pol\u00e9mica puede variar dependiendo del contexto y la organizaci\u00f3n. Si tienes m\u00e1s detalles sobre la pol\u00e9mica en cuesti\u00f3n, estar\u00e9 encantado de ayudarte a encontrar informaci\u00f3n m\u00e1s precisa sobre d\u00f3nde se realizar\u00e1n las manifestaciones.",
+            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre la pol\u00e9mica o la manifestaci\u00f3n que est\u00e1s solicitando. Como asistente de inteligencia artificial, no tengo la capacidad de proporcionar informaci\u00f3n sobre eventos o manifestaciones. Si tienes alguna otra pregunta o necesitas ayuda con algo m\u00e1s, estar\u00e9 encantado de ayudarte.",
             "reference": "Totonto, Montreal y Otawa",
-            "faithfulness": 0.25,
+            "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.044864270387460325,
+            "answer_correctness": 0.032522612319426096,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.17945859042398987
+            "semantic_similarity": 0.13011778368275445
         },
         {
             "user_input": "\u00bfQu\u00e9 tiene pensado Tony?",
@@ -1176,14 +1176,14 @@
                 "Argentina y Gran Breta\u00f1a reanudaron sus relaciones diplom\u00e1ticas en 1990, al cabo de una ronda de negociaciones celebradas en Madrid, en aquella ocasi\u00f3n el pa\u00eds suramericano tuvo que aceptar que las discusiones bilaterales dejaran al margen la espinosa cuesti\u00f3n de la soberan\u00eda sobre las Malvinas. ",
                 "Los barcos argentinos operaban en esa zona como forma de protesta ante la decisi\u00f3n del Gobierno argentino por las limitaciones impuestas a la captura de merluza. "
             ],
-            "response": "Lo siento, pero no tengo informaci\u00f3n espec\u00edfica sobre el pensamiento de Tony en este documento. Sin embargo, en general, Tony es un personaje importante y conocido en la serie de televisi\u00f3n \"The Simpsons\". Es un personaje de la familia Simpson, con una historia de aventuras y conflictos con su familia y amigos. Sin embargo, no tengo detalles espec\u00edficos sobre su pensamiento o comportamiento en particular.",
+            "response": "Lo siento, pero no tengo informaci\u00f3n espec\u00edfica sobre el pensamiento de Tony en la documentaci\u00f3n que proporcionaste. Sin embargo, en general, Tony es un personaje importante en la serie de televisi\u00f3n \"The Simpsons\", conocido por su humor, humor\u00edstico y personaje. Sin embargo, no tengo acceso a detalles espec\u00edficos sobre su pensamiento personal.",
             "reference": "mantener la forma",
             "faithfulness": 0.4,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.029680855666471596,
+            "answer_correctness": 0.030279625380181634,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.11872342266588638
+            "semantic_similarity": 0.12111850152072653
         },
         {
             "user_input": "\u00bfQu\u00e9 actividad deportiva ha practicado siempre?",
@@ -1199,14 +1199,14 @@
                 "Dicha cifra representa alrededor del 4 % de la poblaci\u00f3n mundial. ",
                 "A pesar de ello, en Noruega, la caza de orcas ha sido siempre un objetivo secundario para su industria ballenera y aunque ocasionalmente se ha destinado al consumo humano, el destino fundamental de la carne ha sido el consumo animal. "
             ],
-            "response": "Lo siento, pero no tengo informaci\u00f3n espec\u00edfica sobre qu\u00e9 actividad deportiva ha practicado siempre. Sin embargo, puedo decir que la respuesta a esta pregunta depender\u00eda de la persona y su experiencia en diferentes deportes. Si se refiere a deportes espec\u00edficos, podr\u00eda ser que la respuesta sea sobre la carrera de un deportista o la actividad de un deportista particular. Sin embargo, sin m\u00e1s contexto, no puedo proporcionar una respuesta precisa sobre la actividad deportiva que ha practicado siempre.",
+            "response": "Lo siento, pero no tengo informaci\u00f3n sobre qu\u00e9 actividad deportiva ha practicado siempre. Sin embargo, puedo ayudarte a buscar informaci\u00f3n sobre la actividad deportiva m\u00e1s com\u00fan que practica una persona.",
             "reference": "ciclismo",
-            "faithfulness": 0.75,
+            "faithfulness": 0.5,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.0701355253572461,
-            "context_precision": 0.49999999995,
+            "answer_correctness": 0.07249722737265629,
+            "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.28052504691443936
+            "semantic_similarity": 0.2900015766098999
         },
         {
             "user_input": "\u00bfQu\u00e9 puede causar que dejes tu equipo?",
@@ -1222,14 +1222,14 @@
                 "Mientras que la atribuci\u00f3n no es legalmente obligatoria, ser\u00eda agradecida.",
                 "Mientras que la atribuci\u00f3n no es legalmente obligatoria, ser\u00eda agradecida."
             ],
-            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre el contexto o la situaci\u00f3n espec\u00edfica en la que est\u00e1s. No tengo la capacidad de responder preguntas basadas en informaci\u00f3n personal. Mi funci\u00f3n es proporcionar informaci\u00f3n general y \u00fatil basada en la informaci\u00f3n que me proporcionan. \u00bfHay algo m\u00e1s en lo que pueda ayudarte?",
+            "response": "Lo siento, pero no puedo proporcionar informaci\u00f3n sobre tus acciones o comportamientos personales. Soy un asistente de inteligencia artificial dise\u00f1ado para proporcionar informaci\u00f3n y responder preguntas basada en el contenido que me proporcionas. No tengo la capacidad de analizar o identificar comportamientos individuales.",
             "reference": "motivos profesionales",
             "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.07736132363481751,
+            "answer_correctness": 0.06572234910276943,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.30944529453927005
+            "semantic_similarity": 0.262859034207624
         },
         {
             "user_input": "\u00bfQu\u00e9 nombre recibieron los ciclistas de esa \u00e9poca que se acababa?",
@@ -1245,14 +1245,14 @@
                 "El martes pasado, al hablar ante el Comit\u00e9 de Descolonizaci\u00f3n de las Naciones Unidas, el canciller argentino, Adalberto Rodr\u00edguez Giavarini, reclam\u00f3 al Reino Unido que \"no desoiga\" el llamamiento de los organismos internacionales para que se abra una negociaci\u00f3n formal sobre soberan\u00eda. ",
                 "Los barcos argentinos operaban en esa zona como forma de protesta ante la decisi\u00f3n del Gobierno argentino por las limitaciones impuestas a la captura de merluza. "
             ],
-            "response": "Los ciclistas de esa \u00e9poca que se acababa recibieron el nombre de \"ciclistas de la \u00e9poca\".",
+            "response": "Los ciclistas de esa \u00e9poca que se acababa recibieron el nombre de \"Ciclistas de la Era de la Fuerza\".",
             "reference": "sindicato",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9021666022237166,
-            "answer_correctness": 0.04886684200700618,
+            "answer_relevancy": 0.902185259339655,
+            "answer_correctness": 0.41818387799927703,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.19546736802802472
+            "semantic_similarity": 0.1727086305215984
         },
         {
             "user_input": "\u00bfC\u00f3mo denominaron las fuerzas del Eje la invasi\u00f3n de Yugoslavia?",
@@ -1268,14 +1268,14 @@
                 "La de Miguel, en recobrarla. ",
                 "El encuentro finaliz\u00f3 2 - 1 a favor del Antlers. "
             ],
-            "response": "Las fuerzas del Eje, que inclu\u00edan a los Estados Unidos, Australia, Jap\u00f3n, y otros pa\u00edses, invasaron Yugoslavia en 1991. La invasi\u00f3n fue un evento crucial en la historia de Yugoslavia, que tuvo varios efectos significativos:\n\n1. Cambio de estructura pol\u00edtica: La invasi\u00f3n cambi\u00f3 la estructura pol\u00edtica de Yugoslavia, introduciendo una estructura de poder federalista.\n\n2. Desestabilizaci\u00f3n: La invasi\u00f3n desestabiliz\u00f3 a Yugoslavia, causando descontento y desplazamientos de poblaci\u00f3n.\n\n3. A",
+            "response": "Las fuerzas del Eje, que inclu\u00edan a los Estados Unidos, Australia, Jap\u00f3n, China, y otros pa\u00edses, invasaron Yugoslavia en 1991. La invasi\u00f3n fue un evento crucial en la historia de la Uni\u00f3n Sovi\u00e9tica y el mundo occidental.",
             "reference": "Operaci\u00f3n 25",
-            "faithfulness": 0.625,
-            "answer_relevancy": 0.6350856126558536,
-            "answer_correctness": 0.050959817365489685,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.7522301728215418,
+            "answer_correctness": 0.045224827726294534,
             "context_precision": 0.49999999995,
             "context_recall": 1.0,
-            "semantic_similarity": 0.20383926946195874
+            "semantic_similarity": 0.18088238619288902
         },
         {
             "user_input": "\u00bfCu\u00e1ndo se desarroll\u00f3 la Operaci\u00f3n 25?",
@@ -1314,14 +1314,14 @@
                 "Actualmente se desarrolla el concurso Mujeres Iberoamericanas.",
                 "Argentina y Gran Breta\u00f1a reanudaron sus relaciones diplom\u00e1ticas en 1990, al cabo de una ronda de negociaciones celebradas en Madrid, en aquella ocasi\u00f3n el pa\u00eds suramericano tuvo que aceptar que las discusiones bilaterales dejaran al margen la espinosa cuesti\u00f3n de la soberan\u00eda sobre las Malvinas. "
             ],
-            "response": "La invasi\u00f3n de Yugoslavia, que se conoce como la \"Invasi\u00f3n de Bosnia y Herzegovina\", se enmarca en el conflicto b\u00e9lico entre Yugoslavia y los Estados Unidos. Esta invasi\u00f3n tuvo lugar en 1992 y fue un evento crucial en la historia de Bosnia y Herzegovina y de la regi\u00f3n del Balk\u00e1n.\n\nLa invasi\u00f3n se produjo despu\u00e9s de que los Estados Unidos, que hab\u00edan estado enojados con la situaci\u00f3n de Bosnia y Herzegovina, decidieron retirarse de la regi\u00f3n. Esta decisi\u00f3n fue tomada en respuesta a la violencia y la des",
+            "response": "La invasi\u00f3n de Yugoslavia, que se conoce como la Primera Guerra del Libereo, se enmarca en el conflicto b\u00e9lico entre Francia y los Estados Unidos. Esta guerra fue un conflicto b\u00e9lico internacional que dur\u00f3 desde 1941 hasta 1945 y tuvo como objetivo principal la conquista de la Yugoslavia y la consolidaci\u00f3n de la Uni\u00f3n Sovi\u00e9tica.",
             "reference": "la Segunda Guerra Mundial",
-            "faithfulness": 0.125,
-            "answer_relevancy": 0.5455512852451873,
-            "answer_correctness": 0.08085956215684499,
-            "context_precision": 0.4166666666458333,
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.5939601461386695,
+            "answer_correctness": 0.10419410663732787,
+            "context_precision": 0.49999999998333333,
             "context_recall": 1.0,
-            "semantic_similarity": 0.3236941424814894
+            "semantic_similarity": 0.41677642654931146
         },
         {
             "user_input": "\u00bfCu\u00e1l fue la posici\u00f3n que adopt\u00f3 el gobierno yugoslavo al inicio de la Segunda Guerra Mundial?",
@@ -1337,14 +1337,14 @@
                 "El veto hitleriano a un ataque a Yugoslavia hizo que Mussolini se decidiese a arremeter contra Grecia con el objetivo de extender su influencia en los Balcanes.",
                 "Actualmente se desarrolla el concurso Mujeres Iberoamericanas."
             ],
-            "response": "El gobierno yugoslavo adopt\u00f3 la posici\u00f3n de un pa\u00eds de paz y moderaci\u00f3n durante la Segunda Guerra Mundial. Algunos puntos clave sobre su posici\u00f3n:\n\n1. Primero, adopt\u00f3 la posici\u00f3n de un pa\u00eds de paz y moderaci\u00f3n, lo que significaba que se comprometi\u00f3 a no participar en la guerra y a no hacer nada que pudiera involucrar a su pa\u00eds en la guerra.\n\n2. Se comprometi\u00f3 a no participar en la guerra alem\u00e1n contra la Alemania nazi.\n\n3. Se comprometi\u00f3 a no participar en la guerra alem\u00e1n contra",
+            "response": "El gobierno yugoslavo adopt\u00f3 la posici\u00f3n de un pa\u00eds de paz y defensa nacional durante la Segunda Guerra Mundial. Algunos puntos clave sobre su posici\u00f3n:\n\n1. El gobierno yugoslavo adopt\u00f3 la posici\u00f3n de un pa\u00eds de paz y defensa nacional en 1941, cuando se declar\u00f3 la guerra alem\u00e1n contra Yugoslavia.\n\n2. Esta posici\u00f3n se bas\u00f3 en la idea de que la guerra alem\u00e1n era un conflicto de guerra y no un conflicto de paz.\n\n3. El gobierno yugoslavo se opuso a la guerra alem\u00e1n y se comprom",
             "reference": "neutral",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9188107191564486,
-            "answer_correctness": 0.3492680329577818,
+            "answer_relevancy": 0.7868740651135046,
+            "answer_correctness": 0.04229534020463281,
             "context_precision": 0.99999999995,
             "context_recall": 1.0,
-            "semantic_similarity": 0.19707213183112712
+            "semantic_similarity": 0.16936994121468057
         },
         {
             "user_input": "\u00bfQu\u00e9 pretend\u00eda conseguir Alemania en Yugoslavia hasta 1940?",
@@ -1360,14 +1360,14 @@
                 "El objetivo alem\u00e1n en la zona hasta 1940 era mantener la paz para seguir recibiendo de ella las materias primas que resultaban cruciales para su industria de guerra, especialmente el petr\u00f3leo rumano que se transportaba por el Danubio hasta el Reich. ",
                 "De parte de su territorio surgieron nuevos pa\u00edses con gobiernos afines al Eje, como el Estado Independiente de Croacia o el Estado Independiente de Montenegro."
             ],
-            "response": "Alemania pretend\u00eda conseguir dos objetivos principales en Yugoslavia hasta 1940:\n\n1. Un control sobre el territorio y la econom\u00eda de Yugoslavia:\n   - Alemania pretend\u00eda establecer un r\u00e9gimen de dominio y control sobre el pa\u00eds.\n   - Esto inclu\u00eda la autorizaci\u00f3n de la administraci\u00f3n de la econom\u00eda y la pol\u00edtica de la naci\u00f3n.\n\n2. Un control sobre los ciudadanos y la poblaci\u00f3n:\n   - Alemania pretend\u00eda establecer un r\u00e9gimen de dominio y control sobre la poblaci\u00f3n y los ciudadanos.\n   - Esto inclu\u00eda la autorizaci\u00f3n de la administraci\u00f3n de la pol\u00edtica",
+            "response": "Alemania pretend\u00eda conseguir varios objetivos en Yugoslavia hasta 1940, pero algunos de los m\u00e1s importantes incluyen:\n\n1. Control de la regi\u00f3n: Alemania pretend\u00eda dominar la regi\u00f3n de Yugoslavia, incluyendo la regi\u00f3n de Bosnia y Herzegovina, que era una parte de la regi\u00f3n de Serbia.\n\n2. Control de la regi\u00f3n de Kosovo: Alemania pretend\u00eda controlar la regi\u00f3n de Kosovo, que era una parte de la regi\u00f3n de Serbia.\n\n3. Control de la regi\u00f3n de Montenegro: Alemania pretend\u00eda controlar la regi\u00f3n de Montenegro, que era una parte de la regi\u00f3n de Serbia.\n\n",
             "reference": "mantener la paz para seguir recibiendo de ella las materias primas que resultaban cruciales para su industria de guerra",
-            "faithfulness": 0.0,
-            "answer_relevancy": 0.9040712284739364,
-            "answer_correctness": 0.08432129105947857,
+            "faithfulness": 0.125,
+            "answer_relevancy": 0.8402367624707899,
+            "answer_correctness": 0.07163448297502809,
             "context_precision": 0.11111111109999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.33730690158455534
+            "semantic_similarity": 0.28653793190011234
         },
         {
             "user_input": "\u00bfC\u00f3mo se declaraba el pueblo de Yugoslavia durante la Segunda Guerra Mundial?",
@@ -1383,14 +1383,14 @@
                 "Actualmente se desarrolla el concurso Mujeres Iberoamericanas.",
                 "El veto hitleriano a un ataque a Yugoslavia hizo que Mussolini se decidiese a arremeter contra Grecia con el objetivo de extender su influencia en los Balcanes."
             ],
-            "response": "No tengo informaci\u00f3n espec\u00edfica sobre c\u00f3mo se declaraba el pueblo de Yugoslavia durante la Segunda Guerra Mundial. La historia de Yugoslavia y su conflicto con los Estados Unidos y los aliados fue muy compleja y cambi\u00f3 significativamente despu\u00e9s de la Segunda Guerra Mundial. Sin acceso a fuentes hist\u00f3ricas espec\u00edficas, no puedo proporcionar una respuesta precisa sobre c\u00f3mo se declaraba el pueblo de Yugoslavia durante ese per\u00edodo.",
+            "response": "No tengo informaci\u00f3n espec\u00edfica sobre c\u00f3mo se declaraba el pueblo de Yugoslavia durante la Segunda Guerra Mundial. La historia de Yugoslavia, incluyendo su declaraci\u00f3n de independencia, es muy controvertida y no est\u00e1 completamente claro. Sin embargo, puedo decir que la declaraci\u00f3n oficial de independencia de Yugoslavia fue en 1991, cuando se declar\u00f3 oficialmente el estado de soberan\u00eda nacional de Yugoslavia.",
             "reference": "favorable a los Aliados",
-            "faithfulness": 0.0,
+            "faithfulness": 0.4,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.06777302803280916,
+            "answer_correctness": 0.048181038711858575,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.2711022173321982
+            "semantic_similarity": 0.19269203431061194
         }
     ]
 }

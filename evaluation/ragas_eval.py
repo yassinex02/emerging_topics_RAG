@@ -175,7 +175,7 @@ def get_evaluation_result(evaluation_dataset: EvaluationDataset):
             timeout=60,
             max_retries=10,
             max_wait = 180,
-            max_workers= 1,
+            max_workers= 16,
         ),
         metrics=[
             faithfulness,
@@ -187,6 +187,7 @@ def get_evaluation_result(evaluation_dataset: EvaluationDataset):
         ],
         llm=evaluator_llm,
         embeddings=evaluator_embeddings,
+        batch_size=32
     )
 
 
