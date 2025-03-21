@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 import requests
@@ -162,12 +163,24 @@ def evaluate_rag_app(evaluation_dataset, experiment_notes=""):
 
 
 # --- Entrypoint ---
+def parse_args():
+    parser = argparse.ArgumentParser(description="Evaluate RAG app and log experiment results.")
+    parser.add_argument(
+        "--notes",
+        required=True,
+        help="Required notes describing the experiment (e.g., model configs, changes, observations)."
+    )
+    return parser.parse_args()
+
 def main():
+    args = parse_args()
+    experiment_notes = args.notes
+
     data_path = os.path.join(EVAL_DIR, "data", "test.json")
     data = read_json(data_path)["data"]
     index_documents(data, max_texts=MAX_TEXTS)
     evaluation_dataset = generate_ragas_dataset(data, max_texts=MAX_TEXTS)
-    evaluate_rag_app(evaluation_dataset, experiment_notes="Initial experiment with gpt-4o-mini")
+    evaluate_rag_app(evaluation_dataset, experiment_notes=experiment_notes)
 
 
 if __name__ == "__main__":

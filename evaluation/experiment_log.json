@@ -1,13 +1,13 @@
 {
-    "experiment_notes": "Initial experiment with gpt-4o-mini",
-    "timestamp": "2025-03-21 02:14:25",
+    "experiment_notes": "Testing argpare",
+    "timestamp": "2025-03-21 02:26:15",
     "average_scores": {
         "faithfulness": 0.16666666666666666,
         "answer_relevancy": 0.0,
-        "answer_correctness": 0.26734693956522093,
+        "answer_correctness": 0.26734893227159096,
         "context_precision": 0.0,
         "context_recall": 0.0,
-        "semantic_similarity": 0.06939308388799968
+        "semantic_similarity": 0.06939121530201796
     },
     "scores": [
         {
@@ -20,7 +20,7 @@
             "reference": "c\u00e9lula",
             "faithfulness": 0.0,
             "answer_relevancy": 0.0,
-            "answer_correctness": 0.7783620712070287,
+            "answer_correctness": 0.7783680493261388,
             "context_precision": 0.0,
             "context_recall": 0.0,
             "semantic_similarity": 0.1134642617094625
@@ -38,7 +38,7 @@
             "answer_correctness": 0.004015175447149955,
             "context_precision": 0.0,
             "context_recall": 0.0,
-            "semantic_similarity": 0.01606070178859982
+            "semantic_similarity": 0.0160550960306546
         },
         {
             "user_input": "\u00bfC\u00f3mo se denominan a los seres vivos con una \u00fanica c\u00e9lula?",

@@ -22,7 +22,8 @@ cd ../..
 OPENAI_API_KEY=your_api_key
 ```
 
-5. **Run the ragas evaluation script:**
+5. **Run the ragas evaluation script:**  
+You need to provide a mandatory argument (`--notes`), containing info about the experiment, such as the tei / tgi model used, or any other change.
 ```
-python evaluation/ragas_eval.py
+python evaluation/ragas_eval.py --notes "Write your experiment notes here"
 ```
