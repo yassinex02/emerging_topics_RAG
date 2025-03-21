@@ -131,19 +131,26 @@ def save_experiment_log_to_json(log_data):
 
 
 def append_experiment_summary_to_csv(log_data):
+    average_metrics = log_data["average_scores"]
+    numeric_scores = [v for v in average_metrics.values() if isinstance(v, (int, float))]
+    overall_average_score = sum(numeric_scores) / len(numeric_scores) if numeric_scores else None
+
     summary_row = {
         "timestamp": log_data["timestamp"],
         "experiment_notes": log_data["experiment_notes"],
-        **log_data["average_scores"]
+        "average_score": round(overall_average_score, 4),
+        **{k: round(v, 4) for k, v in average_metrics.items()}
     }
+
     df = pd.DataFrame([summary_row])
+    df.index.name = "experiment_id"
 
     if os.path.exists(CSV_LOG_FILE):
-        df.to_csv(CSV_LOG_FILE, mode="a", header=False, index=False)
+        df.to_csv(CSV_LOG_FILE, mode="a", header=False)
     else:
-        df.to_csv(CSV_LOG_FILE, mode="w", index=False)
+        df.to_csv(CSV_LOG_FILE, mode="w", index=True)
 
-    print(f"Experiment appended to {CSV_LOG_FILE}")
+    print("Experiment appended to", CSV_LOG_FILE)
 
 
 # --- Main Evaluation Entry Point ---

@@ -1,2 +1,2 @@
-timestamp,experiment_notes,faithfulness,answer_relevancy,answer_correctness,context_precision,context_recall,semantic_similarity
-2025-03-21 02:06:01,Initial experiment with gpt-4o-mini,0.16666666666666666,0.0,0.2673469130565782,0.0,0.0,0.06937630155014472
+experiment_id,timestamp,experiment_notes,average_score,faithfulness,answer_relevancy,answer_correctness,context_precision,context_recall,semantic_similarity
+0,2025-03-21 02:14:25,Initial experiment with gpt-4o-mini,0.0839,0.1667,0.0,0.2673,0.0,0.0,0.0694
