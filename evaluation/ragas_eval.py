@@ -18,6 +18,8 @@ from ragas.metrics import (
     context_recall,
     answer_similarity,
 )
+from ragas.dataset_schema import EvaluationResult
+
 
 # --- Config ---
 load_dotenv()
@@ -31,18 +33,25 @@ CSV_LOG_FILE = os.path.join(EVAL_DIR, "experiment_history.csv")
 
 
 # --- IO Utils ---
-def read_json(path):
+def read_json(path: str):
     with open(path, "r") as f:
         return json.load(f)
 
 
-def save_json(data, path):
+def save_json(data: dict, path: str):
     with open(path, "w") as f:
         json.dump(data, f, indent=4)
 
 
 # --- Indexing ---
-def index_documents(data, max_texts=None):
+def index_documents(data: list, max_texts: int=None):
+    """
+    Indexes documents by extracting their contexts and sending them to the RAG system.
+
+    Args:
+        data (list): The dataset containing documents with paragraphs.
+        max_texts (int, optional): Maximum number of texts (paragraphs) to index. If None, indexes all available texts.
+    """
     texts = []
     for document in data:
         contexts = [p["context"] for p in document["paragraphs"]]
@@ -59,15 +68,41 @@ def index_documents(data, max_texts=None):
 
 
 # --- RAG App Response ---
-def generate_response():
-    return {
-        "generated_text": "Pretend I generated something",
-        "contexts": ["Fake context 1", "Fake context 2"]
-    }
+def generate_response(question: str):
+    """
+    Sends a request to the RAG system's /generate endpoint to obtain a response.
+
+    Args:
+        question (str): The user query to send to the RAG model.
+
+    Returns:
+        dict: A dictionary containing the generated response and retrieved contexts.
+    """
+    print(f"\nQuestion: {question}")
+    payload = {"new_message": {"role": "user", "content": question}}
+
+    try:
+        response = requests.post(f"{BASE_URL}/generate", json=payload)
+        response.raise_for_status()
+        return response.json()
+    
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Error calling /generate: {e}")
+        return {"generated_text": "Error: Unable to generate response.", "contexts": []}
 
 
 # --- Ragas Dataset Generation ---
-def generate_ragas_dataset(data, max_texts=None):
+def generate_ragas_dataset(data: list, max_texts=None):
+    """
+    Generates an evaluation dataset for RAGAS by extracting Q&A pairs from documents.
+
+    Args:
+        data (list): The dataset containing documents with paragraphs and questions.
+        max_texts (int, optional): Maximum number of texts (paragraphs) to include in the dataset. If None, uses all.
+
+    Returns:
+        EvaluationDataset: A RAGAS evaluation dataset object.
+    """
     dataset = []
     texts_added = 0
 
@@ -78,7 +113,7 @@ def generate_ragas_dataset(data, max_texts=None):
 
             texts_added += 1
             for qa in paragraph["qas"]:
-                rag_answer = generate_response()
+                rag_answer = generate_response(qa["question"])
                 dataset.append({
                     "user_input": qa["question"],
                     "retrieved_contexts": rag_answer["contexts"],
@@ -93,7 +128,16 @@ def generate_ragas_dataset(data, max_texts=None):
 
 
 # --- Evaluation Helpers ---
-def get_evaluation_result(evaluation_dataset):
+def get_evaluation_result(evaluation_dataset: EvaluationDataset):
+    """
+    Computes evaluation metrics for the given dataset using RAGAS.
+
+    Args:
+        evaluation_dataset (EvaluationDataset): The dataset containing queries, retrieved contexts, responses, and references.
+
+    Returns:
+        EvaluationResult: The result object containing computed metrics.
+    """
     evaluator_llm = LangchainLLMWrapper(ChatOpenAI(model=LLM_EVALUATOR))
     evaluator_embeddings = LangchainEmbeddingsWrapper(OpenAIEmbeddings(model=EMBEDDINGS_EVALUATOR))
 
@@ -112,7 +156,17 @@ def get_evaluation_result(evaluation_dataset):
     )
 
 
-def prepare_experiment_log(result, experiment_notes):
+def prepare_experiment_log(result: EvaluationResult, experiment_notes: str):
+    """
+    Prepares structured logging data for the experiment.
+
+    Args:
+        result (EvaluationResult): The evaluation result containing metric scores.
+        experiment_notes (str): A description of the experiment.
+
+    Returns:
+        dict: A dictionary with experiment metadata, scores, and raw results.
+    """
     df = result.to_pandas()
     avg_scores = df.select_dtypes(include="number").mean().to_dict()
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -125,13 +179,19 @@ def prepare_experiment_log(result, experiment_notes):
     }
 
 
-def save_experiment_log_to_json(log_data):
+def save_experiment_log_to_json(log_data: dict):
     os.makedirs(EVAL_DIR, exist_ok=True)
     save_json(log_data, JSON_LOG_FILE)
     print(f"Experiment logged in {JSON_LOG_FILE}")
 
 
-def append_experiment_summary_to_csv(log_data):
+def append_experiment_summary_to_csv(log_data: dict):
+    """
+    Appends a summary of the experiment (including average scores) to a CSV file.
+
+    Args:
+        log_data (dict): The structured log data containing average scores and metadata.
+    """
     average_metrics = log_data["average_scores"]
     numeric_scores = [v for v in average_metrics.values() if isinstance(v, (int, float))]
     overall_average_score = sum(numeric_scores) / len(numeric_scores) if numeric_scores else None
@@ -155,7 +215,14 @@ def append_experiment_summary_to_csv(log_data):
 
 
 # --- Main Evaluation Entry Point ---
-def evaluate_rag_app(evaluation_dataset, experiment_notes=""):
+def evaluate_rag_app(evaluation_dataset: EvaluationDataset, experiment_notes: str=""):
+    """
+    Orchestrates the full evaluation process: computing metrics, logging results, and saving summaries.
+
+    Args:
+        evaluation_dataset (EvaluationDataset): The dataset to evaluate.
+        experiment_notes (str): Notes describing the experiment.
+    """
     result = get_evaluation_result(evaluation_dataset)
     log_data = prepare_experiment_log(result, experiment_notes)
     save_experiment_log_to_json(log_data)

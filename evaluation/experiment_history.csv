@@ -1,3 +1,4 @@
 experiment_id,timestamp,experiment_notes,average_score,faithfulness,answer_relevancy,answer_correctness,context_precision,context_recall,semantic_similarity
 0,2025-03-21 02:14:25,Initial experiment with gpt-4o-mini,0.0839,0.1667,0.0,0.2673,0.0,0.0,0.0694
 0,2025-03-21 02:26:15,Testing argpare,0.0839,0.1667,0.0,0.2673,0.0,0.0,0.0694
+0,2025-03-21 02:52:32,Testing if it wrks,0.6772,0.5,0.8394,0.3522,0.8796,1.0,0.492

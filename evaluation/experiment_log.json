@@ -1,59 +1,65 @@
 {
-    "experiment_notes": "Testing argpare",
-    "timestamp": "2025-03-21 02:26:15",
+    "experiment_notes": "Testing if it wrks",
+    "timestamp": "2025-03-21 02:52:32",
     "average_scores": {
-        "faithfulness": 0.16666666666666666,
-        "answer_relevancy": 0.0,
-        "answer_correctness": 0.26734893227159096,
-        "context_precision": 0.0,
-        "context_recall": 0.0,
-        "semantic_similarity": 0.06939121530201796
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.8393941809030406,
+        "answer_correctness": 0.35215017191693015,
+        "context_precision": 0.8796296295725309,
+        "context_recall": 1.0,
+        "semantic_similarity": 0.4919778921533234
     },
     "scores": [
         {
             "user_input": "\u00bfCu\u00e1l es el nombre que se le da a la unidad morfol\u00f3gica y funcional de los seres vivos?",
             "retrieved_contexts": [
-                "Fake context 1",
-                "Fake context 2"
+                "En estos \u00faltimos el n\u00famero de c\u00e9lulas es variable: de unos pocos cientos, como en algunos nematodos, a cientos de billones (1014), como en el caso del ser humano. ",
+                "De hecho, la c\u00e9lula es el elemento de menor tama\u00f1o que puede considerarse vivo.\u200b De este modo, puede clasificarse a los organismos vivos seg\u00fan el n\u00famero de c\u00e9lulas que posean: si solo tienen una, se les denomina unicelulares (como pueden ser los protozoos o las bacterias, organismos microsc\u00f3picos); si poseen m\u00e1s, se les llama pluricelulares. ",
+                "La c\u00e9lula (del lat\u00edn cellula, diminutivo de cella, \u2018celda\u2019)\u200b es la unidad morfol\u00f3gica y funcional de todo ser vivo. ",
+                "Las c\u00e9lulas suelen poseer un tama\u00f1o de 10 \u00b5m y una masa de 1 ng, si bien existen c\u00e9lulas mucho mayores."
             ],
-            "response": "Pretend I generated something",
+            "response": "El nombre que se le da a la unidad morfol\u00f3gica y funcional de los seres vivos es \"organismo\".",
             "reference": "c\u00e9lula",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.0,
-            "answer_correctness": 0.7783680493261388,
-            "context_precision": 0.0,
-            "context_recall": 0.0,
-            "semantic_similarity": 0.1134642617094625
+            "answer_relevancy": 0.9735407745072008,
+            "answer_correctness": 0.0887840491681657,
+            "context_precision": 0.6388888888675925,
+            "context_recall": 1.0,
+            "semantic_similarity": 0.35515254124705864
         },
         {
             "user_input": "\u00bfDe d\u00f3nde proviene el t\u00e9rmino \"c\u00e9lula\")",
             "retrieved_contexts": [
-                "Fake context 1",
-                "Fake context 2"
+                "La c\u00e9lula (del lat\u00edn cellula, diminutivo de cella, \u2018celda\u2019)\u200b es la unidad morfol\u00f3gica y funcional de todo ser vivo. ",
+                "Las c\u00e9lulas suelen poseer un tama\u00f1o de 10 \u00b5m y una masa de 1 ng, si bien existen c\u00e9lulas mucho mayores.",
+                "De hecho, la c\u00e9lula es el elemento de menor tama\u00f1o que puede considerarse vivo.\u200b De este modo, puede clasificarse a los organismos vivos seg\u00fan el n\u00famero de c\u00e9lulas que posean: si solo tienen una, se les denomina unicelulares (como pueden ser los protozoos o las bacterias, organismos microsc\u00f3picos); si poseen m\u00e1s, se les llama pluricelulares. ",
+                "En estos \u00faltimos el n\u00famero de c\u00e9lulas es variable: de unos pocos cientos, como en algunos nematodos, a cientos de billones (1014), como en el caso del ser humano. "
             ],
-            "response": "Pretend I generated something",
+            "response": "El t\u00e9rmino \"c\u00e9lula\" proviene de la palabra griega \"k\u00e8leus\", que significa \"c\u00e9lula\" en espa\u00f1ol. Esta palabra se refiere a la unidad celular, que es la unidad b\u00e1sica de todos los organismos vivos.",
             "reference": "del lat\u00edn cellula, diminutivo de cella, \u2018celda\u2019",
             "faithfulness": 0.5,
-            "answer_relevancy": 0.0,
-            "answer_correctness": 0.004015175447149955,
-            "context_precision": 0.0,
-            "context_recall": 0.0,
-            "semantic_similarity": 0.0160550960306546
+            "answer_relevancy": 0.5696031348168261,
+            "answer_correctness": 0.34422094453561414,
+            "context_precision": 0.9999999999,
+            "context_recall": 1.0,
+            "semantic_similarity": 0.6269570618055267
         },
         {
             "user_input": "\u00bfC\u00f3mo se denominan a los seres vivos con una \u00fanica c\u00e9lula?",
             "retrieved_contexts": [
-                "Fake context 1",
-                "Fake context 2"
+                "De hecho, la c\u00e9lula es el elemento de menor tama\u00f1o que puede considerarse vivo.\u200b De este modo, puede clasificarse a los organismos vivos seg\u00fan el n\u00famero de c\u00e9lulas que posean: si solo tienen una, se les denomina unicelulares (como pueden ser los protozoos o las bacterias, organismos microsc\u00f3picos); si poseen m\u00e1s, se les llama pluricelulares. ",
+                "La c\u00e9lula (del lat\u00edn cellula, diminutivo de cella, \u2018celda\u2019)\u200b es la unidad morfol\u00f3gica y funcional de todo ser vivo. ",
+                "Las c\u00e9lulas suelen poseer un tama\u00f1o de 10 \u00b5m y una masa de 1 ng, si bien existen c\u00e9lulas mucho mayores.",
+                "En estos \u00faltimos el n\u00famero de c\u00e9lulas es variable: de unos pocos cientos, como en algunos nematodos, a cientos de billones (1014), como en el caso del ser humano. "
             ],
-            "response": "Pretend I generated something",
+            "response": "Los seres vivos con una \u00fanica c\u00e9lula se denominan c\u00e9lulas unicelulares.",
             "reference": "unicelulares",
-            "faithfulness": 0.0,
-            "answer_relevancy": 0.0,
-            "answer_correctness": 0.019663572041484185,
-            "context_precision": 0.0,
-            "context_recall": 0.0,
-            "semantic_similarity": 0.07865428816593674
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.9750386333850952,
+            "answer_correctness": 0.6234455220470106,
+            "context_precision": 0.99999999995,
+            "context_recall": 1.0,
+            "semantic_similarity": 0.4938240734073849
         }
     ]
 }
