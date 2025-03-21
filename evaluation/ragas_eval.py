@@ -21,6 +21,7 @@ from ragas.metrics import (
 
 load_dotenv()
 BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
+MAX_TEXTS = 100
 
 
 def read_json(path):
@@ -28,25 +29,28 @@ def read_json(path):
         return json.load(f)    
 
 
-def index_documents(path):
+def index_documents(data, max_texts=None):
     """
     Load documents from the evaluation dataset then send a request to the /upload endpoint to index and persist the evaluation documents.
 
     Args:
-        path (str): Path to the SQAC corpus test.json file.
+        data (dict): Loaded SQAC corpus test.json file.
+        max_texts (int, optional): The maximum number of texts to index. If None, indexes the full evaluation dataset.
     """
-    data = read_json(path)["data"]
-
     texts = []
     for document in data:
         contexts = [paragraph["context"] for paragraph in document["paragraphs"]]
         texts.extend(contexts)
-    
+
+    if max_texts is not None:
+        texts = texts[:max_texts]
+
     upload_payload = {"texts": texts}
     print("Uploading documents...\n")
     resp_upload = requests.post(f"{BASE_URL}/upload", json=upload_payload)
     print("Status code /upload:", resp_upload.status_code)
     print("Response /upload:", resp_upload.json())
+
 
 
 def generate_response():
@@ -62,22 +66,26 @@ def generate_response():
     }
 
 
-def generate_ragas_dataset(path):
+def generate_ragas_dataset(data, max_texts=None):
     """
-    Load and prepare the evaluation dataset by generating responses and structuring data for evaluation.
+    Prepare the evaluation dataset by generating responses and structuring data for evaluation.
 
     Args:
-        path (str): Path to the SQAC corpus test.json file.
-
+        data (dict): Loaded SQAC corpus test.json file.
+        max_texts (int, optional): The maximum number of texts to use for evaluation. If None, uses the full evaluation dataset.
+    
     Returns:
         ragas.EvaluationDataset: Prepared dataset for RAG evaluation.
     """
-    data = read_json(path)["data"]
-
     dataset = []
-    
-    for text in data:
-        for paragraph in text["paragraphs"]:
+    texts_added = 0
+
+    for document in data:
+        for paragraph in document["paragraphs"]:
+            if max_texts is not None and texts_added >= max_texts:
+                break
+
+            texts_added += 1
             for qa in paragraph["qas"]:
                 rag_answer = generate_response()
                 dataset.append({
@@ -86,15 +94,17 @@ def generate_ragas_dataset(path):
                     "response": rag_answer["generated_text"],
                     "reference": qa["answers"][0]["text"]
                 })
-                    
-    evaluation_dataset = EvaluationDataset.from_list(dataset)
+        
+        if max_texts is not None and texts_added >= max_texts:
+            break
 
-    return evaluation_dataset
+    return EvaluationDataset.from_list(dataset)
+
 
 
 def evaluate_rag_app(evaluation_dataset):
     """
-    Compute evaluation metrics for the provided evaluation dataset using OpenAI's GPT-4o-mini as the evaluator.
+    Compute evaluation metrics for the provided evaluation dataset using OpenAI's gpt-4o-mini as the llm evaluator and text-embedding-3-small as the embeddings evaluator.
 
     Args:
         evaluation_dataset (ragas.EvaluationDataset): The dataset containing user queries, retrieved contexts, generated responses, and reference answers.
@@ -133,8 +143,9 @@ def main():
         3. Compute RAGAS evaluation metrics and save them as a CSV file.
     """
     data_path = os.path.join("evaluation", "data", "test.json")
-    index_documents(data_path)
-    evaluation_dataset = generate_ragas_dataset(data_path)
+    data = read_json(data_path)["data"]
+    index_documents(data, max_texts=MAX_TEXTS)
+    evaluation_dataset = generate_ragas_dataset(data, max_texts=MAX_TEXTS)
     evaluate_rag_app(evaluation_dataset)
 
 

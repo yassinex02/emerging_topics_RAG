@@ -17,7 +17,12 @@ wget https://huggingface.co/datasets/PlanTL-GOB-ES/SQAC/resolve/main/test.json
 cd ../..
 ```
 
-4. **Run the ragas evaluation script:**
+4. **Add your OPENAI API KEY to a `.env` file:**
+```
+OPENAI_API_KEY=your_api_key
+```
+
+5. **Run the ragas evaluation script:**
 ```
 python evaluation/ragas_eval.py
 ```
