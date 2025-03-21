@@ -1,13 +1,14 @@
 {
     "experiment_notes": "Testing if it wrks",
-    "timestamp": "2025-03-21 02:52:32",
+    "timestamp": "2025-03-21 03:05:49",
+    "overall_score": 0.6838698505791895,
     "average_scores": {
-        "faithfulness": 0.5,
-        "answer_relevancy": 0.8393941809030406,
-        "answer_correctness": 0.35215017191693015,
-        "context_precision": 0.8796296295725309,
+        "faithfulness": 0.4166666666666667,
+        "answer_relevancy": 0.8848880419632215,
+        "answer_correctness": 0.2936713984679731,
+        "context_precision": 0.9999999999416667,
         "context_recall": 1.0,
-        "semantic_similarity": 0.4919778921533234
+        "semantic_similarity": 0.5079929964356092
     },
     "scores": [
         {
@@ -21,11 +22,11 @@
             "response": "El nombre que se le da a la unidad morfol\u00f3gica y funcional de los seres vivos es \"organismo\".",
             "reference": "c\u00e9lula",
             "faithfulness": 0.0,
-            "answer_relevancy": 0.9735407745072008,
-            "answer_correctness": 0.0887840491681657,
-            "context_precision": 0.6388888888675925,
+            "answer_relevancy": 0.9735326504820822,
+            "answer_correctness": 0.08878315488991709,
+            "context_precision": 0.999999999975,
             "context_recall": 1.0,
-            "semantic_similarity": 0.35515254124705864
+            "semantic_similarity": 0.35513261955966835
         },
         {
             "user_input": "\u00bfDe d\u00f3nde proviene el t\u00e9rmino \"c\u00e9lula\")",
@@ -35,14 +36,14 @@
                 "De hecho, la c\u00e9lula es el elemento de menor tama\u00f1o que puede considerarse vivo.\u200b De este modo, puede clasificarse a los organismos vivos seg\u00fan el n\u00famero de c\u00e9lulas que posean: si solo tienen una, se les denomina unicelulares (como pueden ser los protozoos o las bacterias, organismos microsc\u00f3picos); si poseen m\u00e1s, se les llama pluricelulares. ",
                 "En estos \u00faltimos el n\u00famero de c\u00e9lulas es variable: de unos pocos cientos, como en algunos nematodos, a cientos de billones (1014), como en el caso del ser humano. "
             ],
-            "response": "El t\u00e9rmino \"c\u00e9lula\" proviene de la palabra griega \"k\u00e8leus\", que significa \"c\u00e9lula\" en espa\u00f1ol. Esta palabra se refiere a la unidad celular, que es la unidad b\u00e1sica de todos los organismos vivos.",
+            "response": "El t\u00e9rmino \"c\u00e9lula\" proviene de la palabra griega \"k\u00e8leus\", que significa \"c\u00e9lula\" en lat\u00edn. En espa\u00f1ol, se traduce como \"c\u00e9lula\" o \"c\u00e9lula\" en ingl\u00e9s.",
             "reference": "del lat\u00edn cellula, diminutivo de cella, \u2018celda\u2019",
-            "faithfulness": 0.5,
-            "answer_relevancy": 0.5696031348168261,
-            "answer_correctness": 0.34422094453561414,
+            "faithfulness": 0.25,
+            "answer_relevancy": 0.7060694099565198,
+            "answer_correctness": 0.1687750221621559,
             "context_precision": 0.9999999999,
             "context_recall": 1.0,
-            "semantic_similarity": 0.6269570618055267
+            "semantic_similarity": 0.6750222963397746
         },
         {
             "user_input": "\u00bfC\u00f3mo se denominan a los seres vivos con una \u00fanica c\u00e9lula?",
@@ -55,8 +56,8 @@
             "response": "Los seres vivos con una \u00fanica c\u00e9lula se denominan c\u00e9lulas unicelulares.",
             "reference": "unicelulares",
             "faithfulness": 1.0,
-            "answer_relevancy": 0.9750386333850952,
-            "answer_correctness": 0.6234455220470106,
+            "answer_relevancy": 0.9750620654510627,
+            "answer_correctness": 0.6234560183518463,
             "context_precision": 0.99999999995,
             "context_recall": 1.0,
             "semantic_similarity": 0.4938240734073849

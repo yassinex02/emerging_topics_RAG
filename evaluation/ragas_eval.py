@@ -192,7 +192,7 @@ def save_experiment_log_to_json(log_data: dict):
 
 def append_experiment_summary_to_csv(log_data: dict):
     """
-    Appends a summary of the experiment (including average scores) to a CSV file.
+    Appends a summary of the experiment (including average scores) to a CSV file. Auto-increments the experiment_id. 
 
     Args:
         log_data (dict): The structured log data containing average scores and metadata.
@@ -201,7 +201,17 @@ def append_experiment_summary_to_csv(log_data: dict):
     numeric_scores = [v for v in average_metrics.values() if isinstance(v, (int, float))]
     overall_average_score = sum(numeric_scores) / len(numeric_scores) if numeric_scores else None
 
+    if os.path.exists(CSV_LOG_FILE):
+        existing_df = pd.read_csv(CSV_LOG_FILE)
+        if "experiment_id" in existing_df.columns and not existing_df.empty:
+            next_experiment_id = existing_df["experiment_id"].max() + 1
+        else:
+            next_experiment_id = 0
+    else:
+        next_experiment_id = 0 
+
     summary_row = {
+        "experiment_id": next_experiment_id,
         "timestamp": log_data["timestamp"],
         "experiment_notes": log_data["experiment_notes"],
         "overall_score": round(overall_average_score, 4),
@@ -212,7 +222,7 @@ def append_experiment_summary_to_csv(log_data: dict):
     df.index.name = "experiment_id"
 
     if os.path.exists(CSV_LOG_FILE):
-        df.to_csv(CSV_LOG_FILE, mode="a", header=False)
+        df.to_csv(CSV_LOG_FILE, mode="a", header=False, index=False)
     else:
         df.to_csv(CSV_LOG_FILE, mode="w", index=True)
 
