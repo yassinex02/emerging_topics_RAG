@@ -1,4 +1,6 @@
-# Instructions to run the ragas evaluation:
+# Ragas evaluation
+
+## Instructions to run the ragas evaluation:
 
 If you have already previously downloaded the evaluation dataset `test.json`, you can skip ahead to step 4.
 
@@ -17,7 +19,8 @@ wget https://huggingface.co/datasets/PlanTL-GOB-ES/SQAC/resolve/main/test.json
 cd ../..
 ```
 
-4. **Add your OPENAI API KEY to a `.env` file:**
+4. **Add your OPENAI API KEY to a `.env` file:**  
+The evaluation uses OpenAI models as evaluators.
 ```
 OPENAI_API_KEY=your_api_key
 ```
@@ -27,3 +30,6 @@ You need to provide a mandatory argument (`--notes`), containing info about the 
 ```
 python evaluation/ragas_eval.py --notes "Write your experiment notes here"
 ```
+
+## Summary of experiments:  
+*Insert markdown table containing the same info as the csv file basically*

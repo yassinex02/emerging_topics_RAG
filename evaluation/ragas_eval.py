@@ -3,6 +3,7 @@ import json
 import logging
 import os
 import requests
+import time
 from datetime import datetime
 
 import pandas as pd
@@ -31,6 +32,10 @@ EMBEDDINGS_EVALUATOR = "text-embedding-3-small"
 EVAL_DIR = "evaluation"
 JSON_LOG_FILE = os.path.join(EVAL_DIR, "experiment_log.json")
 CSV_LOG_FILE = os.path.join(EVAL_DIR, "experiment_history.csv")
+
+# Global speed performance trackers
+TOTAL_RESPONSE_TIME = 0.0
+TOTAL_RESPONSES = 0
 
 # --- Logging Setup ---
 logging.basicConfig(
@@ -78,6 +83,7 @@ def index_documents(data: list, max_texts: int=None):
 def generate_response(question: str):
     """
     Sends a request to the RAG system's /generate endpoint to obtain a response.
+    Updates global counters for response speed calculation.
 
     Args:
         question (str): The user query to send to the RAG model.
@@ -85,17 +91,29 @@ def generate_response(question: str):
     Returns:
         dict: A dictionary containing the generated response and retrieved contexts.
     """
+    global TOTAL_RESPONSE_TIME, TOTAL_RESPONSES
+
     logging.info(f"Question: {question}")
     payload = {"new_message": {"role": "user", "content": question}}
+
+    start_time = time.perf_counter()
 
     try:
         response = requests.post(f"{BASE_URL}/generate", json=payload)
         response.raise_for_status()
-        return response.json()
+        result = response.json()
     
     except requests.exceptions.RequestException as e:
         logging.error(f"Error calling /generate: {e}")
-        return {"generated_text": "Error: Unable to generate response.", "contexts": []}
+        result = {"generated_text": "Error: Unable to generate response.", "contexts": []}
+    
+    end_time = time.perf_counter()
+    elapsed = end_time - start_time
+
+    TOTAL_RESPONSE_TIME += elapsed
+    TOTAL_RESPONSES += 1
+
+    return result
 
 
 # --- Ragas Dataset Generation ---
@@ -119,6 +137,7 @@ def generate_ragas_dataset(data: list, max_texts=None):
                 break
 
             texts_added += 1
+            logging.info(f"Processing text: {texts_added}/{MAX_TEXTS}")
             for qa in paragraph["qas"]:
                 rag_answer = generate_response(qa["question"])
                 dataset.append({
@@ -182,10 +201,13 @@ def prepare_experiment_log(result: EvaluationResult, experiment_notes: str):
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+    responses_per_second = TOTAL_RESPONSES / TOTAL_RESPONSE_TIME if TOTAL_RESPONSE_TIME > 0 else 0.0
+
     return {
         "experiment_notes": experiment_notes,
         "timestamp": timestamp,
         "overall_score": overall_score,
+        "responses_per_second": round(responses_per_second, 4),
         "average_scores": avg_scores,
         "scores": df.to_dict(orient="records")
     }
@@ -205,8 +227,6 @@ def append_experiment_summary_to_csv(log_data: dict):
         log_data (dict): The structured log data containing average scores and metadata.
     """
     average_metrics = log_data["average_scores"]
-    numeric_scores = [v for v in average_metrics.values() if isinstance(v, (int, float))]
-    overall_average_score = sum(numeric_scores) / len(numeric_scores) if numeric_scores else None
 
     if os.path.exists(CSV_LOG_FILE):
         existing_df = pd.read_csv(CSV_LOG_FILE)
@@ -221,7 +241,8 @@ def append_experiment_summary_to_csv(log_data: dict):
         "experiment_id": next_experiment_id,
         "timestamp": log_data["timestamp"],
         "experiment_notes": log_data["experiment_notes"],
-        "overall_score": round(overall_average_score, 4),
+        "overall_score": round(log_data["overall_score"], 4),
+        "responses_per_second": round(log_data["responses_per_second"], 4),
         **{k: round(v, 4) for k, v in average_metrics.items()}
     }
 
@@ -231,7 +252,7 @@ def append_experiment_summary_to_csv(log_data: dict):
     if os.path.exists(CSV_LOG_FILE):
         df.to_csv(CSV_LOG_FILE, mode="a", header=False, index=False)
     else:
-        df.to_csv(CSV_LOG_FILE, mode="w", index=True)
+        df.to_csv(CSV_LOG_FILE, mode="w", index=False)
 
     logging.info(f"Experiment appended to {CSV_LOG_FILE}")
 
