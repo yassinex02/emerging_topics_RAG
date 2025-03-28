@@ -14,7 +14,7 @@ from llama_index.core.node_parser.text import SentenceWindowNodeParser
 try:
     from llama_index.core import Document
 except ImportError:
-    from llama_index.readers.schema.base import Document
+    from llama_index.readers.schema.base import Document # type: ignore
 
 from huggingface_hub import InferenceClient
 from transformers import AutoTokenizer
