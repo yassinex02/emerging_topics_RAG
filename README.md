@@ -63,14 +63,14 @@ curl -X POST "http://localhost:8000/generate" \
 
 ### Testing the API with Python
 
-You can test the "test_rag.py" file to test how this works running on python
+You can run the `tests/test_rag.py` file to test how this works running on python.
 
 ### Summary
 
 - **Build the images**: `docker compose build`
 - **Run the containers**: `docker compose up -d`
 - **Stop the containers**: `docker compose down`
-- **Test the API**: Use `curl` commands or `test_rag.py`
+- **Test the API**: Use `curl` commands or `tests/test_rag.py`
 
 
 ### HOW TO WORK WITH THIS MOVING FORWARD
@@ -91,4 +91,3 @@ docker compose up -d
 ```sh
 docker compose down
 ```
-s
