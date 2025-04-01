@@ -136,12 +136,13 @@ async def generate_text(request: Request):
         system_prompt = (
             "You are an assistant that responds strictly based on the "
             "provided document information."
+            "here are the documents retreived: {contexts}"
         )
         
         # Construct input prompt for generation
         prompt = tokenizer.apply_chat_template(
             [
-                {"role": "system", "content": system_prompt},
+                {"role": "system", "content": system_prompt.format(contexts=docs)},
                 {"role": "input", "content": docs},
                 new_message
             ],
