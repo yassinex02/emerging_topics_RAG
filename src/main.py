@@ -1,3 +1,4 @@
+import logging
 import os
 
 from dotenv import load_dotenv
@@ -22,6 +23,9 @@ except ImportError:
 from huggingface_hub import InferenceClient
 from transformers import AutoTokenizer
 
+from utils import supports_input_role
+
+
 # --- Load env variables ---
 load_dotenv()
 HF_TOKEN = os.getenv("HF_TOKEN", "")
@@ -29,13 +33,16 @@ HF_TOKEN = os.getenv("HF_TOKEN", "")
 tei_model_name = os.getenv("TEI_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
 tgi_model_name = os.getenv("TGI_MODEL", "Qwen/Qwen2.5-0.5B-Instruct")
 
+# --- Set up logging Config ---
+logging.basicConfig(level=logging.INFO)
+
 # Initialize FastAPI application
 app = FastAPI()
 
 # ==========================
 # CONFIGURATION: TEXT EMBEDDINGS INFERENCE (TEI)
 # ==========================
-print(f"Using embedding model: {tei_model_name}")
+logging.info(f"Using embedding model: {tei_model_name}")
 
 # Configure embedding settings
 Settings.llm = None  # No language model is set directly in settings
@@ -48,17 +55,21 @@ Settings.embed_model = TextEmbeddingsInference(
 # ==========================
 # CONFIGURATION: TEXT GENERATION INFERENCE (TGI)
 # ==========================
-print("Configuring TGI client for text generation...")
+logging.info("Configuring TGI client for text generation...")
 
 # Initialize the text generation client
 generator = InferenceClient("http://tgi:80")
-print(f"Using generative model (TGI): {tgi_model_name}")
+tgi_model_name = "LenguajeNaturalAI/leniachat-gemma-2b-v0"
+logging.info(f"Using generative model (TGI): {tgi_model_name}")
 
 
-print("Loading tokenizer...")
+logging.info("Loading tokenizer...")
 # Load the tokenizer for processing input text
 tokenizer = AutoTokenizer.from_pretrained(tgi_model_name, token=HF_TOKEN)
-
+if supports_input_role(tokenizer):
+    logging.info("hell yeah")
+else:
+    logging.info("hell nahh")
 # Global variable to store the vector index
 index = None
 
