@@ -1,4 +1,7 @@
 import os
+
+from dotenv import load_dotenv
+
 from fastapi import FastAPI, Request, HTTPException
 from pydantic import BaseModel
 
@@ -19,13 +22,19 @@ except ImportError:
 from huggingface_hub import InferenceClient
 from transformers import AutoTokenizer
 
+# --- Load env variables ---
+load_dotenv()
+HF_TOKEN = os.getenv("HF_TOKEN", "")
+
+tei_model_name = os.getenv("TEI_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+tgi_model_name = os.getenv("TGI_MODEL", "Qwen/Qwen2.5-0.5B-Instruct")
+
 # Initialize FastAPI application
 app = FastAPI()
 
 # ==========================
 # CONFIGURATION: TEXT EMBEDDINGS INFERENCE (TEI)
 # ==========================
-tei_model_name = os.getenv("TEI_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
 print(f"Using embedding model: {tei_model_name}")
 
 # Configure embedding settings
@@ -43,14 +52,12 @@ print("Configuring TGI client for text generation...")
 
 # Initialize the text generation client
 generator = InferenceClient("http://tgi:80")
-
-tgi_model_name = os.getenv("TGI_MODEL", "Qwen/Qwen2.5-0.5B-Instruct")
 print(f"Using generative model (TGI): {tgi_model_name}")
 
 
 print("Loading tokenizer...")
 # Load the tokenizer for processing input text
-tokenizer = AutoTokenizer.from_pretrained(tgi_model_name)
+tokenizer = AutoTokenizer.from_pretrained(tgi_model_name, token=HF_TOKEN)
 
 # Global variable to store the vector index
 index = None
