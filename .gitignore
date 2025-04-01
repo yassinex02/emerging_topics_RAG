@@ -4,3 +4,4 @@ tei_data/
 tgi_data/
 .python-version
 .env
+__pycache__/

@@ -47,6 +47,7 @@ generator = InferenceClient("http://tgi:80")
 tgi_model_name = os.getenv("TGI_MODEL", "Qwen/Qwen2.5-0.5B-Instruct")
 print(f"Using generative model (TGI): {tgi_model_name}")
 
+
 print("Loading tokenizer...")
 # Load the tokenizer for processing input text
 tokenizer = AutoTokenizer.from_pretrained(tgi_model_name)
