@@ -1,2 +1,2 @@
 experiment_id,timestamp,experiment_notes,overall_score,responses_per_second,faithfulness,answer_relevancy,answer_correctness,context_precision,context_recall,semantic_similarity
-1,2025-03-21 14:25:36,Baseline score without changing the rag app,0.3409,0.1524,0.1126,0.5258,0.1053,0.413,0.6167,0.272
+0,2025-04-02 00:44:49,Baseline score,0.5702,0.1666,0.5913,0.7818,0.4645,0.48,0.7,0.4035
