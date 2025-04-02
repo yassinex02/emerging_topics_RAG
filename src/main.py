@@ -23,7 +23,7 @@ except ImportError:
 from huggingface_hub import InferenceClient
 from transformers import AutoTokenizer
 
-from utils import supports_input_role
+from src.utils import supports_input_role
 
 
 # --- Load env variables ---
@@ -59,7 +59,6 @@ logging.info("Configuring TGI client for text generation...")
 
 # Initialize the text generation client
 generator = InferenceClient("http://tgi:80")
-tgi_model_name = "LenguajeNaturalAI/leniachat-gemma-2b-v0"
 logging.info(f"Using generative model (TGI): {tgi_model_name}")
 
 
@@ -67,9 +66,9 @@ logging.info("Loading tokenizer...")
 # Load the tokenizer for processing input text
 tokenizer = AutoTokenizer.from_pretrained(tgi_model_name, token=HF_TOKEN)
 if supports_input_role(tokenizer):
-    logging.info("hell yeah")
+    logging.info("The chat template of the tokenizer supports the 'input' role. The retrieved documents will be passed there.")
 else:
-    logging.info("hell nahh")
+    logging.info("The chat template of the tokenizer does NOT support the 'input' role. The retrieved documents will be passed in the system prompt.")
 # Global variable to store the vector index
 index = None
 
@@ -154,21 +153,31 @@ async def generate_text(request: Request):
         # Construct system prompt for the assistant
         system_prompt = (
             "You are an assistant that responds strictly based on the "
-            "provided document information."
-            "here are the documents retreived: {contexts}"
+            "relevant provided document information."
         )
-        
-        # Construct input prompt for generation
-        prompt = tokenizer.apply_chat_template(
-            [
-                {"role": "system", "content": system_prompt.format(contexts=docs)},
-                {"role": "input", "content": docs},
-                new_message
-            ],
-            add_generation_prompt=True,
-            tokenize=False
-        )
-        
+
+        # Construct input prompt for generation    
+        if supports_input_role(tokenizer):
+            prompt = tokenizer.apply_chat_template(
+                [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "input", "content": docs},
+                    new_message
+                ],
+                add_generation_prompt=True,
+                tokenize=False
+            )
+        else:
+             system_prompt += "\nHere are the retrieved documents: {contexts}"
+             prompt = tokenizer.apply_chat_template(
+                [
+                    {"role": "system", "content": system_prompt.format(contexts=docs)},
+                    new_message
+                ],
+                add_generation_prompt=True,
+                tokenize=False
+            )
+             
         # Generate response using the TGI service
         answer = generator.text_generation(
             prompt,
