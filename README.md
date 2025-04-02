@@ -17,11 +17,17 @@ This project provides a Retrieval-Augmented Generation (RAG) API using FastAPI, 
 ```
 BASE_URL=http://localhost:8000
 
-OPENAI_API_KEY=<your api key here in case you want to run the `ragas_eval.py`> (optional)
 HF_TOKEN=<your hugging face token in case you want to use TGI models with restricted access> (optional)
 
 TEI_MODEL=sentence-transformers/all-MiniLM-L12-v2 (change this value to change the tei model used)
 TGI_MODEL=Qwen/Qwen2.5-0.5B-Instruct (change this value to change the tgi model used)
+```
+
+In case you want to run the evaluation script (`ragas_eval.py`), you also need to add the following fields:
+```
+OPENAI_API_KEY=<your_key>
+
+COLLAB_NAME=<your_name>
 ```
 
 #### 1. Build the Containers
