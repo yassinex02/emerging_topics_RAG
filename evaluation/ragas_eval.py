@@ -214,6 +214,8 @@ def prepare_experiment_log(result: EvaluationResult, experiment_notes: str):
 
     return {
         "experiment_notes": experiment_notes,
+        "tei_model": os.getenv("TEI_MODEL"),
+        "tgi_model": os.getenv("TGI_MODEL"),
         "timestamp": timestamp,
         "overall_score": overall_score,
         "responses_per_second": round(responses_per_second, 4),
@@ -249,6 +251,8 @@ def append_experiment_summary_to_csv(log_data: dict):
     summary_row = {
         "experiment_id": next_experiment_id,
         "timestamp": log_data["timestamp"],
+        "tei_model": log_data["tei_model"],
+        "tgi_model": log_data["tgi_model"],
         "experiment_notes": log_data["experiment_notes"],
         "overall_score": round(log_data["overall_score"], 4),
         "responses_per_second": round(log_data["responses_per_second"], 4),

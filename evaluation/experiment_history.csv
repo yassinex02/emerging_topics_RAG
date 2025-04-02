@@ -1,2 +1,2 @@
-experiment_id,timestamp,experiment_notes,overall_score,responses_per_second,faithfulness,answer_relevancy,answer_correctness,context_precision,context_recall,semantic_similarity
-0,2025-04-02 00:44:49,Baseline score,0.5702,0.1666,0.5913,0.7818,0.4645,0.48,0.7,0.4035
+experiment_id,timestamp,tei_model,tgi_model,experiment_notes,overall_score,responses_per_second,faithfulness,answer_relevancy,answer_correctness,context_precision,context_recall,semantic_similarity
+0,2025-04-02 13:54:09,sentence-transformers/all-MiniLM-L12-v2,Qwen/Qwen2.5-0.5B-Instruct,Baseline score,0.5641,0.1666,0.5563,0.7673,0.4658,0.4847,0.7,0.4107
